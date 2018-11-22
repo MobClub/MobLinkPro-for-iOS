@@ -143,8 +143,7 @@ ii. Universal Link 后台已经为您生成好您的Universal Link，如上图�
 
 然后在项目中配置Universal Link，请务必填写与后台生成的Universal Link地址(可以添加多个) 参考下图：
 
-![](http://onmw6wg88.bkt.clouddn.com/Snip20170526_11.png)
-
+![universal link](http://onmw6wg88.bkt.clouddn.com/Snip20170526_11.png)
 
 1.3 添加代码
 
