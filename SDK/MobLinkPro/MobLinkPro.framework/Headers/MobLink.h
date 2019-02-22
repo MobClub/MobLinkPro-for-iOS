@@ -11,7 +11,7 @@
 
 @class MLSDKScene;
 
-typedef void(^MLSDKResultHandler)(NSString *mobid, NSString *domain, NSError *error);
+typedef void(^MLSDKResultHandler)(NSString *_Nullable mobid, NSString *_Nullable domain, NSError *_Nullable error);
 
 @interface MobLink : NSObject
 
@@ -21,7 +21,7 @@ typedef void(^MLSDKResultHandler)(NSString *mobid, NSString *domain, NSError *er
  @param scene 当前场景信息(即传入您需要还原的场景)
  @param resultHandler 回调处理,返回mobid
  */
-+ (void)getMobId:(MLSDKScene *)scene result:(MLSDKResultHandler)resultHandler;
++ (void)getMobId:(nullable MLSDKScene *)scene result:(MLSDKResultHandler)resultHandler;
 
 /**
  设置场景恢复委托
@@ -29,5 +29,12 @@ typedef void(^MLSDKResultHandler)(NSString *mobid, NSString *domain, NSError *er
  @param delegate 委托对象
  */
 + (void)setDelegate:(id <IMLSDKRestoreDelegate>)delegate;
+
+/**
+ MobLink 版本号
+
+ @return 当前版本号
+ */
++ (NSString *)sdkVer;
 
 @end

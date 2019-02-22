@@ -12,13 +12,6 @@
 @interface UIViewController (MLSDKRestore)
 
 /**
- 设定控制器路径（可选，兼容3.0.0之前版本）
- 
- @return 控制器路径
- */
-+ (NSString *)MLSDKPath;
-
-/**
  控制器初始化
 
  @param scene 场景参数

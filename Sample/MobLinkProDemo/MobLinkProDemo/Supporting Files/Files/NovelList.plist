@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageName</key>
+		<string>xyj</string>
+		<key>bookID</key>
+		<string>0</string>
+		<key>title</key>
+		<string>西游记</string>
+		<key>author</key>
+		<string>吴承恩</string>
+		<key>describe</key>
+		<string>《西游记》全书分为三大部分，前七回是全书的引子部分，一边安排孙悟空出场，交代清楚其出身、师承、能耐、性情；一边通过孙悟空在天、地、冥、水四境界穿越，描绘四境界风貌...</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>shz</string>
+		<key>bookID</key>
+		<string>1</string>
+		<key>title</key>
+		<string>水浒传</string>
+		<key>author</key>
+		<string>施耐庵</string>
+		<key>describe</key>
+		<string>《水浒传》取材于北宋末年以宋江为首的一百零八好汉从聚义梁山泊，到受朝廷招安，再到征四寇，灭叛党，最终却遭奸人谋害的英雄故事。《水浒传》的内容构成可以分为两大部分...</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>sgyy</string>
+		<key>bookID</key>
+		<string>2</string>
+		<key>title</key>
+		<string>三国演义</string>
+		<key>author</key>
+		<string>罗贯中</string>
+		<key>describe</key>
+		<string>《三国演义》反映了三国时代错综复杂的政治军事斗争，概括了这一时代的历史风云，塑造了曹操、刘备、孙权、诸葛亮等一批英雄人物...</string>
+	</dict>
+</array>
+</plist>

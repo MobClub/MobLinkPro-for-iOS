@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageName</key>
+		<string>zixun</string>
+		<key>title</key>
+		<string>资讯还原</string>
+		<key>detail</key>
+		<string>资讯还原文字介绍巴拉巴拉</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>xsydhy</string>
+		<key>title</key>
+		<string>小说阅读还原</string>
+		<key>detail</key>
+		<string>小说阅读还原文字介绍巴拉巴拉</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>yxcjhy</string>
+		<key>title</key>
+		<string>游戏场景还原</string>
+		<key>detail</key>
+		<string>游戏场景还原文字介绍巴拉巴拉</string>
+	</dict>
+</array>
+</plist>

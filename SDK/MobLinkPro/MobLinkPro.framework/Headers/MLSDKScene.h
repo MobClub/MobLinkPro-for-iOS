@@ -13,27 +13,27 @@
 /**
  路径，自定义的路径
  */
-@property (nonatomic, copy) NSString *path;
+@property (nonatomic, copy, nullable) NSString *path;
 
 /**
  自定义参数
  */
-@property (nonatomic, strong)  NSDictionary *params;
+@property (nonatomic, strong, nullable)  NSDictionary *params;
 
 /**
  类名，即需要恢复的控制器名称
  */
-@property (nonatomic, copy, readonly) NSString *className;
+@property (nonatomic, copy, readonly, nullable) NSString *className;
 
 /**
  MobId
  */
-@property (nonatomic, copy, readonly) NSString *mobid;
+@property (nonatomic, copy, readonly, nullable) NSString *mobid;
 
 /**
  打开的原始链接
  */
-@property (nonatomic, copy, readonly) NSString *rawURL;
+@property (nonatomic, copy, readonly, nullable) NSString *rawURL;
 
 /**
  初始化场景 @form v3.0.0
@@ -42,8 +42,8 @@
  @param path 路径
  @return 场景对象
  */
-+ (instancetype)sceneForPath:(NSString *)path
-                      params:(NSDictionary *)params;
++ (instancetype)sceneForPath:(nullable NSString *)path
+                      params:(nullable NSDictionary *)params;
 
 /**
  初始化场景
@@ -53,8 +53,8 @@
  @param params 自定义参数,可传入自定义键值对
  @return 场景对象
  */
-- (instancetype)initWithMLSDKPath:(NSString *)path
-                           source:(NSString *)source
-                           params:(NSDictionary *)params __deprecated_msg("deprecated from v3.0.0. Use 'sceneForPath:params:'.");
+- (instancetype)initWithMLSDKPath:(nullable NSString *)path
+                           source:(nullable NSString *)source
+                           params:(nullable NSDictionary *)params __deprecated_msg("deprecated from v3.0.0. Use 'sceneForPath:params:'.");
 
 @end

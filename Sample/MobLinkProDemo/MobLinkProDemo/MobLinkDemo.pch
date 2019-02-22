@@ -1,0 +1,46 @@
+//
+//  MobLinkDemo.pch
+//  MobLinkProDemo
+//
+//  Created by lujh on 2018/12/10.
+//  Copyright © 2018 mob. All rights reserved.
+//
+
+#ifndef MobLinkDemo_pch
+#define MobLinkDemo_pch
+
+#import <MOBFoundation/MOBFoundation.h>
+
+#import "MLDDefine.h"
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define PUBLICSCALE SCREEN_WIDTH / 375.0
+
+//是否是X
+#define MOBLINK_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ([[UIScreen mainScreen] currentMode].size.height == 1792 ||[[UIScreen mainScreen] currentMode].size.height >=2436) : NO)
+
+//底部home高度
+#define MOBLINK_TabbarSafeBottomMargin (MOBLINK_iPhoneX ? 34.f : 0.f)
+
+#define MOBLINK_StatusBarSafeBottomMargin (MOBLINK_iPhoneX ? 44.f : 20.f)
+
+//#define isTest
+
+#ifdef isTest
+    //测试
+//    #define MLD_Host @"http://172.25.49.63"
+//    #define MLD_Port @"8999"
+    #define MLD_Host @"http://61.174.10.198"
+    #define MLD_Port @"8999"
+    #define baseShareUrl @"http://10.18.97.58:2122/"
+#else
+    //线上
+    #define MLD_Host @"http://61.174.10.198"
+    #define MLD_Port @"8999"
+    #define baseShareUrl @"http://f.moblink.mob.com/"
+#endif
+
+
+#endif /* MobLinkDemo_pch */
