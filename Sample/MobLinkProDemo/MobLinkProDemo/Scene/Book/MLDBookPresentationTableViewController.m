@@ -45,14 +45,23 @@ static NSString * const readTableCellReuseIdentifier = @"MLDReadTableViewCell";
     
     NSIndexPath *selectIndexPath = [NSIndexPath indexPathForRow:self.markModel.page inSection:0];
     
-    [self.tableView selectRowAtIndexPath:selectIndexPath animated:NO scrollPosition:UITableViewScrollPositionTop];
+    if (self.chapterArray.count > 0)
+    {
+        [self.tableView scrollToRowAtIndexPath:selectIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    }
 }
 
 - (void)setMarkModel:(MLDMarkModel *)markModel
 {
     _markModel = markModel;
-    [self.chapterArray addObject:_markModel.chapterModel.chapterID];
-    [self.chapterModelArray addObject:_markModel.chapterModel];
+    if (_markModel.chapterModel.chapterID)
+    {
+        [self.chapterArray addObject:_markModel.chapterModel.chapterID];
+    }
+    if (_markModel.chapterModel)
+    {
+        [self.chapterModelArray addObject:_markModel.chapterModel];
+    }
 }
 
 #pragma mark - Table view data source

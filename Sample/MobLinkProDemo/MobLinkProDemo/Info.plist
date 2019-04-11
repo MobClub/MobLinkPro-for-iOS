@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.0.1</string>
+	<string>3.0.2</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -86,7 +86,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>20190218</string>
+	<string>20190307</string>
 	<key>FacebookAppID</key>
 	<string>148252749452354</string>
 	<key>LSApplicationQueriesSchemes</key>

@@ -135,6 +135,16 @@
 		2EFEB9C321CA64AA00A18109 /* MLDReadConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB9C221CA64A900A18109 /* MLDReadConfig.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2E04CE1921BE65D2004351E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E04CDF821BE65D0004351E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E04CDFF21BE65D0004351E0;
+			remoteInfo = MobLinkProDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		04F8752614BB11E9ABA7AC87 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		054830FD14BB11E98338AC87 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -144,6 +154,7 @@
 		2E04CE0321BE65D0004351E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E04CE0421BE65D0004351E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2E04CE1221BE65D2004351E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E04CE1821BE65D2004351E0 /* MobLinkProDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobLinkProDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E04CE4B21BE8451004351E0 /* MLDMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLDMainViewController.h; sourceTree = "<group>"; };
 		2E04CE4C21BE8451004351E0 /* MLDMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLDMainViewController.m; sourceTree = "<group>"; };
 		2E04CE4E21BE8551004351E0 /* MobLinkDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobLinkDemo.pch; sourceTree = "<group>"; };
@@ -390,6 +401,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2E04CE1521BE65D2004351E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -406,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				2E04CE0021BE65D0004351E0 /* MobLinkProDemo.app */,
+				2E04CE1821BE65D2004351E0 /* MobLinkProDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -981,6 +1000,24 @@
 			productReference = 2E04CE0021BE65D0004351E0 /* MobLinkProDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2E04CE1721BE65D2004351E0 /* MobLinkProDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E04CE2421BE65D2004351E0 /* Build configuration list for PBXNativeTarget "MobLinkProDemoTests" */;
+			buildPhases = (
+				2E04CE1421BE65D2004351E0 /* Sources */,
+				2E04CE1521BE65D2004351E0 /* Frameworks */,
+				2E04CE1621BE65D2004351E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E04CE1A21BE65D2004351E0 /* PBXTargetDependency */,
+			);
+			name = MobLinkProDemoTests;
+			productName = MobLinkProDemoTests;
+			productReference = 2E04CE1821BE65D2004351E0 /* MobLinkProDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1001,6 +1038,12 @@
 							};
 						};
 					};
+					2E04CE1721BE65D2004351E0 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = LW5266U92D;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2E04CDFF21BE65D0004351E0;
+					};
 				};
 			};
 			buildConfigurationList = 2E04CDFB21BE65D0004351E0 /* Build configuration list for PBXProject "MobLinkProDemo" */;
@@ -1017,6 +1060,7 @@
 			projectRoot = "";
 			targets = (
 				2E04CDFF21BE65D0004351E0 /* MobLinkProDemo */,
+				2E04CE1721BE65D2004351E0 /* MobLinkProDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1048,6 +1092,13 @@
 				2E2EC11C21CE2CC000CF8F80 /* HomeList.plist in Resources */,
 				2EE43A5E21E7471100B66183 /* Assets.xcassets in Resources */,
 				2EA2CEC921C117BA001281ED /* MLDFriendsListTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E04CE1621BE65D2004351E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1146,7 +1197,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2E04CE1421BE65D2004351E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E04CE1A21BE65D2004351E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E04CDFF21BE65D0004351E0 /* MobLinkProDemo */;
+			targetProxy = 2E04CE1921BE65D2004351E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2E04CE1F21BE65D2004351E0 /* Debug */ = {
@@ -1326,6 +1392,36 @@
 			};
 			name = Release;
 		};
+		2E04CE2521BE65D2004351E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LW5266U92D;
+				INFOPLIST_FILE = MobLinkProDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.MobLink.MobLinkProDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobLinkProDemo.app/MobLinkProDemo";
+			};
+			name = Debug;
+		};
+		2E04CE2621BE65D2004351E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LW5266U92D;
+				INFOPLIST_FILE = MobLinkProDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.MobLink.MobLinkProDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobLinkProDemo.app/MobLinkProDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1343,6 +1439,15 @@
 			buildConfigurations = (
 				2E04CE2221BE65D2004351E0 /* Debug */,
 				2E04CE2321BE65D2004351E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E04CE2421BE65D2004351E0 /* Build configuration list for PBXNativeTarget "MobLinkProDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E04CE2521BE65D2004351E0 /* Debug */,
+				2E04CE2621BE65D2004351E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

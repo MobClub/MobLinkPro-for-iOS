@@ -58,7 +58,6 @@
     }
     else
     {
-        //TODO:改成宏
         paragraphStyle.lineSpacing = 10;
         paragraphStyle.paragraphSpacing = 50;
         paragraphStyle.alignment = NSTextAlignmentJustified;

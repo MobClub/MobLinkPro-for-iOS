@@ -85,6 +85,14 @@
             self.markModel = [[MLDMarkModel alloc] init];
             self.markModel.bookID = novelDict[@"title"];
             self.markModel.chapterID = self.scene.params[@"section"];
+            if (!self.scene.params[@"section"])
+            {
+                self.markModel.chapterID = @"1";
+            }
+            else
+            {
+                self.markModel.chapterID = self.scene.params[@"section"];
+            }
             self.markModel.readPercent = [self.scene.params[@"percent"] floatValue] * 0.01;
             // 读取资源
             self.novelDict = self.dataArray[[self.scene.params[@"novel"] integerValue]];
@@ -181,8 +189,13 @@
             NSInteger pageCount = self.bookModel.readMarkModel.chapterModel.pageCount;
             
             self.markModel.page = pageCount * self.markModel.readPercent;
+            if (self.markModel.page == pageCount)
+            {
+                self.markModel.page--;
+            }
              // 设置当前页面
             [self.markModel modifyWithChapterID:self.markModel.chapterID page:self.markModel.page];
+            
             [self createPresentationController:self.markModel];
         }
         else
