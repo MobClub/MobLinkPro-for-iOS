@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) MLDUser *user;
 
+@property (nonatomic, copy) NSString *mobid;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

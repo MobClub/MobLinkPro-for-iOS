@@ -89,7 +89,7 @@
 
  @param onView iPhone可以传nil,但是iPad就必须要传一个分享弹窗的依赖视图,相当于一个锚点
  */
-- (void)shareQrcodeScreenCaptureOnView:(UIView *)onView;
+- (void)shareQrcodeScreenCaptureOnView:(UIView *)onView mobid:(NSString *)mobid;
 
 /**
  显示场景信息

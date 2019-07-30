@@ -10,6 +10,15 @@
 
 #import "MLDUser.h"
 
+#import "MLDReachability.h"
+
+@interface MLDNetworkManager ()
+{
+    UIAlertController *_alertController;
+}
+
+@end
+
 @implementation MLDNetworkManager
 
 + (instancetype)sharedManager
@@ -27,6 +36,7 @@
 - (void)getMLDUserNeedRetry:(BOOL)retry
                  completion:(void (^)(MLDUser *user, NSError *error))completion
 {
+    if (![self checkNetWork]) return;
     NSString *urlString = [NSString stringWithFormat:@"%@:%@/user/login", MLD_Host, MLD_Port];
     
     __weak typeof(self) weakSelf = self;
@@ -67,6 +77,7 @@
                        roomNumber:(NSString *)roomNumber
                        completion:(void (^)(NSString *, NSArray *users))completion
 {
+    if (![self checkNetWork]) return;
     NSString *urlString = [NSString stringWithFormat:@"%@:%@/game/joinRoom", MLD_Host, MLD_Port];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if (uid)
@@ -127,6 +138,7 @@
 
 - (void)exitGameWithCurrentUserID:(NSString *)uid completion:(void (^)(BOOL))completion
 {
+    if (![self checkNetWork]) return;
     NSString *urlString = [NSString stringWithFormat:@"%@:%@/game/exit", MLD_Host, MLD_Port];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if (uid)
@@ -166,6 +178,7 @@
                             roomNumber:(NSString *)roomNumber
                               complete:(void (^)(NSArray *users, NSString *roomNumber, NSError *error))completion
 {
+    if (![self checkNetWork]) return;
     if (!roomNumber)
     {
         if (completion)
@@ -230,6 +243,7 @@
                                      type:(MLDAnalyType)type
                                completion:(void (^)(BOOL))completion
 {
+    if (![self checkNetWork]) return;
     NSString *urlString = [NSString stringWithFormat:@"%@:%@/push/addMoneyPush", MLD_Host, MLD_Port];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if (uid)
@@ -274,6 +288,7 @@
 
 - (void)queryEarningsWithCurrentUid:(NSString *)uid completion:(void (^)(MLDEarnings *, NSError *))completion
 {
+    if (![self checkNetWork]) return;
     NSString *urlString = [NSString stringWithFormat:@"%@:%@/push/query", MLD_Host, MLD_Port];
     NSDictionary *params = nil;
     if (uid)
@@ -316,6 +331,7 @@
 - (void)queryFriendsWithCurrentUid:(NSString *)uid
                           complete:(void (^)(NSArray *friends, NSError *error))completion
 {
+    if (![self checkNetWork]) return;
     NSString *urlString = [NSString stringWithFormat:@"%@:%@/friend/query", MLD_Host, MLD_Port];
     NSDictionary *params = nil;
     if (uid)
@@ -363,6 +379,7 @@
                            channel:(MLDChannelType)channel
                         completion:(void (^)(MLDUser *user, NSError *error))completion
 {
+    if (![self checkNetWork]) return;
     NSString *urlString = [NSString stringWithFormat:@"%@:%@/friend/add", MLD_Host, MLD_Port];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if (uid)
@@ -410,6 +427,7 @@
                           otherUserID:(NSString *)otherUid
                            completion:(void (^)(MLDUser *user, NSError *error))completion
 {
+    if (![self checkNetWork]) return;
     NSString *urlString = [NSString stringWithFormat:@"%@:%@/friend/del", MLD_Host, MLD_Port];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if (uid)
@@ -453,6 +471,7 @@
 
 - (void)queryUserInfoWithUserID:(NSString *)uid completion:(void (^)(MLDUser *user, NSError *error))completion
 {
+    if (![self checkNetWork]) return;
     NSString *urlString = [NSString stringWithFormat:@"%@:%@/user/info", MLD_Host, MLD_Port];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if (uid)
@@ -496,6 +515,7 @@
                        promoteType:(MLDAnalyType)promoteType
                         completion:(void (^)(NSArray *, NSError *))completion
 {
+    if (![self checkNetWork]) return;
     NSString *urlString = [NSString stringWithFormat:@"%@:%@/record", MLD_Host, MLD_Port];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if (uid)
@@ -534,6 +554,7 @@
                            sourceType:(MLDSceneType)type
                            completion:(void (^)(BOOL))completion
 {
+    if (![self checkNetWork]) return;
     NSString *urlString = [NSString stringWithFormat:@"%@:%@/scene/log", MLD_Host, MLD_Port];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if (uid)
@@ -573,5 +594,55 @@
                                            }
                                        } onUploadProgress:nil];
 }
+
+- (BOOL)checkNetWork
+{
+    MLDReachability *internetReachability = [MLDReachability reachabilityForInternetConnection];
+    MLDNetworkStatus netStatus = [internetReachability currentReachabilityStatus];
+
+    if (netStatus == MLDNotReachable)
+    {
+        [self showNetworkRestrictedAlert];
+    }
+    return netStatus;
+}
+
+- (void)showNetworkRestrictedAlert {
+    if (self.alertController.presentingViewController == nil && ![self.alertController isBeingPresented]) {
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:self.alertController animated:YES completion:nil];
+    }
+}
+
+- (void)hideNetworkRestrictedAlert
+{
+    [_alertController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (UIAlertController *)alertController
+{
+    if (!_alertController)
+    {
+        _alertController = [UIAlertController alertControllerWithTitle:@"网络连接失败"
+                                                               message:@"检测到网络权限可能未开启，您可以在“设置”中检查蜂窝移动网络"
+                                                        preferredStyle:UIAlertControllerStyleAlert];
+        [_alertController addAction:[UIAlertAction actionWithTitle:@"取消"
+                                                             style:UIAlertActionStyleCancel
+                                                           handler:^(UIAlertAction * _Nonnull action) {
+                                                               [self hideNetworkRestrictedAlert];
+                                                           }]];
+        
+        [_alertController addAction:[UIAlertAction actionWithTitle:@"设置"
+                                                             style:UIAlertActionStyleDefault
+                                                           handler:^(UIAlertAction * _Nonnull action) {
+                                                               NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                                                               if([[UIApplication sharedApplication] canOpenURL:settingsURL])
+                                                               {
+                                                                   [[UIApplication sharedApplication] openURL:settingsURL];
+                                                               }
+                                                           }]];
+    }
+    return _alertController;
+}
+
 
 @end

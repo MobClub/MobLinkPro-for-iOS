@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MOBFoundation/MOBFDataModel.h>
 
 /**
  *  基础用户信息对象

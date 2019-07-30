@@ -4,9 +4,8 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:z.t4m.cn</string>
-		<string>applinks:7ne9.ulml.mob.com</string>
 		<string>applinks:70r9.link.mob.com</string>
+		<string>applinks:z.t4m.cn</string>
 	</array>
 </dict>
 </plist>

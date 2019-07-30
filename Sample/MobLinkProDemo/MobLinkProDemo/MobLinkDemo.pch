@@ -26,20 +26,21 @@
 
 #define MOBLINK_StatusBarSafeBottomMargin (MOBLINK_iPhoneX ? 44.f : 20.f)
 
+// 注释此行则为线上环境
 //#define isTest
 
 #ifdef isTest
     //测试
-//    #define MLD_Host @"http://172.25.49.63"
-//    #define MLD_Port @"8999"
     #define MLD_Host @"http://10.21.141.61"
     #define MLD_Port @"8999"
-    #define baseShareUrl @"http://10.18.97.58:2122/"
+    #define baseShareUrl @"http://10.18.97.58:2122/pro"
+    #define ULDomain @"https://70r9.link.mob.com"
 #else
     //线上
     #define MLD_Host @"http://61.174.10.198"
     #define MLD_Port @"8999"
-    #define baseShareUrl @"http://f.moblink.mob.com/"
+    #define baseShareUrl @"http://f.moblink.mob.com/pro"
+    #define ULDomain @"https://z.t4m.cn"
 #endif
 
 

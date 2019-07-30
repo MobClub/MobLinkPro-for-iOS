@@ -84,8 +84,8 @@
 {
     _earnings = earnings;
     
-    self.promoteLabel.text = [NSString stringWithFormat:@"%ld", earnings.promoteCount];
-    self.earningsLabel.text = [NSString stringWithFormat:@"%ld", earnings.earningsCount];
+    self.promoteLabel.text = [NSString stringWithFormat:@"%ld", (long)earnings.promoteCount];
+    self.earningsLabel.text = [NSString stringWithFormat:@"%ld", (long)earnings.earningsCount];
 }
 
 - (void)drawRect:(CGRect)rect

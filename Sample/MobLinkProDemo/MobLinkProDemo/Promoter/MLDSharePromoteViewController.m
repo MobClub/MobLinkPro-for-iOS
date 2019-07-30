@@ -22,6 +22,7 @@
 @interface MLDSharePromoteViewController ()
 
 @property (nonatomic, strong) MLSDKScene *scene;
+@property (nonatomic, weak) MLDShareQRCodeView *qrCodeView;
 
 @end
 
@@ -87,7 +88,7 @@
 - (void)shareItemClick:(UIButton *)shareBtn
 {    
     // 截图分享
-    [[MLDTool shareInstance] shareQrcodeScreenCaptureOnView:shareBtn];
+    [[MLDTool shareInstance] shareQrcodeScreenCaptureOnView:shareBtn mobid:self.qrCodeView.mobid];
 }
 
 - (void)loadUI
@@ -96,6 +97,7 @@
     scrollView.frame = self.view.bounds;
     
     MLDShareQRCodeView *qrCodeView = [[MLDShareQRCodeView alloc] initWithFrame:self.view.bounds];
+    self.qrCodeView = qrCodeView;
     
     MLDUser *currentUser = [MLDUserManager sharedManager].currentUser;
     if (!currentUser)

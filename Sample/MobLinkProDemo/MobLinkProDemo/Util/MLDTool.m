@@ -100,7 +100,7 @@
                   path:(NSString *)path
                 onView:(UIView *)onView
 {
-    [self shareWithMobId:mobid title:title text:text image:imageName path:path domain:nil onView:onView];
+    [self shareWithMobId:mobid title:title text:text image:imageName path:path domain:ULDomain onView:onView];
 }
 
 /**
@@ -121,75 +121,35 @@
                 domain:(NSString *)domain
                 onView:(UIView *)onView
 {
-    
-    NSURL *url = nil;
-    NSString *urlStr = nil;
-    if (domain)
-    {
-        urlStr = [NSString stringWithFormat:@"%@%@",domain,mobid];
-        url = [NSURL URLWithString:urlStr];
-    }
-    else
-    {
-        if (path)
-        {
-            if ([path hasPrefix:@"/"])
-            {
-                path = [path substringFromIndex:1];
-            }
-            urlStr = [NSString stringWithFormat:@"%@%@",baseShareUrl, path];
-            url = [NSURL URLWithString:urlStr];
-            if (mobid)
-            {
-                if (url.query)
-                {
-                    urlStr = [NSString stringWithFormat:@"%@%@&mobid=%@",baseShareUrl, path, mobid];
-                }
-                else
-                {
-                    urlStr = [NSString stringWithFormat:@"%@%@?mobid=%@",baseShareUrl, path, mobid];
-                }
-            }
-        }
-        else
-        {
-            urlStr = [NSString stringWithFormat:@"%@?mobid=%@",baseShareUrl, mobid];
-        }
-        url = [NSURL URLWithString:urlStr];
-    }
+
+    NSURL *domainUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",domain,mobid]];
+    NSURL *pageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@&mobid=%@",baseShareUrl, path, mobid]];
 
     NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-    
+
     [shareParams SSDKSetupShareParamsByText:text
                                      images:[UIImage imageNamed:imageName]
-                                        url:url
+                                        url:pageUrl
                                       title:title
                                        type:SSDKContentTypeWebPage];
-    
-    if (![ShareSDK isClientInstalled:SSDKPlatformTypeSinaWeibo])
-    {
-        [shareParams SSDKSetupSinaWeiboShareParamsByText:[NSString stringWithFormat:@"%@%@", text, url.absoluteString]
-                                                   title:title
-                                                  images:[UIImage imageNamed:imageName]
-                                                   video:nil
-                                                     url:nil
-                                                latitude:0
-                                               longitude:0
-                                                objectID:nil
-                                          isShareToStory:YES
-                                                    type:SSDKContentTypeImage];
-    }
-    
+
     [shareParams SSDKSetupFacebookParamsByText:text
                                          image:@"http://www.mob.com/assets/images/pro_pic_MobLink-9615ec41.png"
-                                           url:url
+                                           url:pageUrl
                                       urlTitle:@"MobLink"
                                        urlName:nil
                                 attachementUrl:nil
                                        hashtag:@"#MobLink"
                                          quote:@"Mob官网 - 全球领先的移动开发者服务平台"
                                           type:SSDKContentTypeWebPage];
-    
+    // 短信内容
+    [shareParams SSDKSetupSMSParamsByText:[NSString stringWithFormat:@"%@ %@ %@", title, domainUrl.absoluteString, text]
+                                    title:title
+                                   images:nil
+                              attachments:nil
+                               recipients:@[@"15757870542"]
+                                     type:SSDKContentTypeText];
+
     self.paramsCache = [shareParams copy];
 
     [self shareWithParams:shareParams onView:onView];
@@ -198,39 +158,34 @@
 - (void)shareWithParams:(NSMutableDictionary *)params onView:(UIView *)onView
 {
     SSUIShareSheetConfiguration *config = [[SSUIShareSheetConfiguration alloc] init];
-    
+
     //设置分享菜单为简洁样式
     config.style = SSUIActionSheetStyleSimple;
-    
+
     //设置直接分享的平台（不弹编辑界面）
     config.directSharePlatforms = [ShareSDK activePlatforms];
-    
-    NSMutableArray *platformItems = [[ShareSDK activePlatforms] mutableCopy];
-    if ([platformItems containsObject:@(SSDKPlatformSubTypeWechatFav)])
-    {
-        [platformItems removeObject:@(SSDKPlatformSubTypeWechatFav)];
-    }
-    
+
     SSUIPlatformItem *itemFacebook = [[SSUIPlatformItem alloc] init];
     itemFacebook.iconNormal = [UIImage imageNamed:@"fb_icon"];//默认版显示的图标
     itemFacebook.iconSimple = [UIImage imageNamed:@"fb_s_icon"];//简洁版显示的图标
     itemFacebook.platformName = @"Facebook";
-    
-//    SSUIPlatformItem *itemTwitter = [[SSUIPlatformItem alloc] init];
-//    itemTwitter.iconNormal = [UIImage imageNamed:@"tw_icon"];
-//    itemTwitter.iconSimple = [UIImage imageNamed:@"tw_s_icon"];
-//    itemTwitter.platformName = @"Twitter";
-    
     //添加点击事件
     [itemFacebook addTarget:self action:@selector(costomPlatFormClick:)];
-//    [itemTwitter addTarget:self action:@selector(costomPlatFormClick:)];
-    
-    [platformItems removeObjectsInArray:@[@(SSDKPlatformTypeFacebook)]];
-    
-    [platformItems addObjectsFromArray:@[itemFacebook]];
-    
+
+    //QQ、新浪微博、微信好友、微信朋友圈、Twitter、Facebook、短信、复制链接 顺序
+    NSArray *platforms = @[
+                           @(SSDKPlatformSubTypeQQFriend),
+                           @(SSDKPlatformTypeSinaWeibo),
+                           @(SSDKPlatformSubTypeWechatSession),
+                           @(SSDKPlatformSubTypeWechatTimeline),
+                           @(SSDKPlatformTypeTwitter),
+                           itemFacebook,
+                           @(SSDKPlatformTypeSMS),
+                           @(SSDKPlatformTypeCopy)
+                           ];
+
     [ShareSDK showShareActionSheet:[MOBFDevice isPad] ? onView : nil
-                       customItems:platformItems
+                       customItems:platforms
                        shareParams:params
                 sheetConfiguration:config
                     onStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
@@ -242,7 +197,7 @@
                             case SSDKResponseStateFail:
                                 [self showAlertWithMessage:@"分享失败！"];
                                 break;
-                                
+
                             default:
                                 break;
                         }
@@ -258,7 +213,7 @@
                 case SSDKResponseStateSuccess:
                 {
                     [self showAlertWithMessage:@"授权成功！"];
-                    
+
                     [ShareSDK share:SSDKPlatformTypeFacebook parameters:[self.paramsCache mutableCopy] onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {
                         switch (state)
                         {
@@ -268,7 +223,7 @@
                             case SSDKResponseStateFail:
                                 [self showAlertWithMessage:@"分享失败！"];
                                 break;
-                                
+
                             default:
                                 break;
                         }
@@ -280,6 +235,8 @@
             }
         }];
     }
+
+    // 以下固定注释
 //    else if ([item.platformName isEqualToString:@"Twitter"])
 //    {
 //        [shareParams SSDKSetupShareParamsByText:self.paramsCache[@"text"]
@@ -305,7 +262,7 @@
 //    }
 }
 
-- (void)shareQrcodeScreenCaptureOnView:(UIView *)onView
+- (void)shareQrcodeScreenCaptureOnView:(UIView *)onView mobid:(NSString *)mobid
 {
     [SSEShareHelper screenCaptureShare:^(SSDKImage *sImage, SSEShareHandler shareHandler) {
         if(sImage != nil)
@@ -317,6 +274,15 @@
                                            url:nil
                                          title:nil
                                           type:SSDKContentTypeImage];
+            // 短信内容
+            NSString *domainUrlStr = [NSString stringWithFormat:@"%@/%@", ULDomain, mobid];
+            [params SSDKSetupSMSParamsByText:[NSString stringWithFormat:@"MobLink 一键唤醒 %@ 移动端场景还原解决方案", domainUrlStr]
+                                            title:@"MobLink 一键唤醒"
+                                           images:nil
+                                      attachments:nil
+                                       recipients:@[@"15757870542"]
+                                             type:SSDKContentTypeText];
+            
             [self shareWithParams:params onView:onView];
         }
     } onStateChanged:nil];
@@ -401,7 +367,7 @@
 {
     static NSString *const MLDAlreadyPromote = @"MLDAlreadyPromote";
     
-    BOOL res = [[NSUserDefaults standardUserDefaults] objectForKey:MLDAlreadyPromote];
+    BOOL res = [[[NSUserDefaults standardUserDefaults] objectForKey:MLDAlreadyPromote] boolValue];
     if (!res)
     {
         [[NSUserDefaults standardUserDefaults] setObject:@(YES) forKey:MLDAlreadyPromote];

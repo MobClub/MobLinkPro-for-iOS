@@ -20,7 +20,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    if ([super initWithFrame:frame])
+    if (self = [super initWithFrame:frame])
     {
         [self loadSubViewsWithFrame:frame];
     }

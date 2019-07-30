@@ -62,7 +62,7 @@
     UIImage *retVal = UIGraphicsGetImageFromCurrentImageContext();
     
     CGImageRelease(bitmapImage);
-    CGContextRelease(bitmapContextRef);
+    UIGraphicsEndImageContext();
     return retVal;
 }
 

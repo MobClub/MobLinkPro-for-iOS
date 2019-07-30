@@ -11,6 +11,7 @@
 /**
  场景恢复方式枚举
  
+ - MLDefault: 自动选择
  - MLPresent: Present
  - MLPush: Push
  */
@@ -19,7 +20,6 @@ typedef enum : NSUInteger {
     MLPresent,
     MLPush,
 } RestoreStyle;
-
 
 @class MLSDKScene;
 

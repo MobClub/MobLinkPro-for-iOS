@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface MLDChapterModel : NSObject
 
 @property (nonatomic, copy) NSString *bookID;
@@ -43,5 +41,3 @@ NS_ASSUME_NONNULL_BEGIN
 + (MLDChapterModel *)chapterModelWithBookID:(NSString *)bookID chapterID:(NSString *)chapterID;
 
 @end
-
-NS_ASSUME_NONNULL_END

@@ -18,7 +18,7 @@
 /**
  自定义参数
  */
-@property (nonatomic, strong, nullable)  NSDictionary *params;
+@property (nonatomic, copy, nullable) NSDictionary *params;
 
 /**
  类名，即需要恢复的控制器名称
@@ -34,6 +34,7 @@
  打开的原始链接
  */
 @property (nonatomic, copy, readonly, nullable) NSString *rawURL;
+
 
 /**
  初始化场景 @form v3.0.0

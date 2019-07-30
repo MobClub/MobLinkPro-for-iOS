@@ -107,8 +107,6 @@ static NSString * MLDParagraphHeaderSpace = @"　　";
         
         MLDChapterModel *lastChapterModel = nil;
         
-        BOOL isPreface = YES;
-        
         for (int i = 0; i <= count; i++)
         {
             NSRange range = NSMakeRange(0, 0);
@@ -139,7 +137,6 @@ static NSString * MLDParagraphHeaderSpace = @"　　";
 
                 if (!(readChapterModel.content && readChapterModel.content.length > 0))
                 {
-                    isPreface = NO;
                     continue;
                 }
             }
@@ -210,7 +207,11 @@ static NSString * MLDParagraphHeaderSpace = @"　　";
         [[NSFileManager defaultManager] createDirectoryAtPath:cachePath withIntermediateDirectories:YES attributes:nil error:nil];
     }
     
-    [NSKeyedArchiver archiveRootObject:capterModel toFile:[cachePath stringByAppendingPathComponent:capterModel.chapterID]];
+    if (capterModel.chapterID)
+    {
+        [NSKeyedArchiver archiveRootObject:capterModel toFile:[cachePath stringByAppendingPathComponent:capterModel.chapterID]];
+    }
+    
 }
 
 + (MLDChapterListModel *)getReadChapterListModel:(MLDChapterModel *)chapterModel
@@ -263,7 +264,7 @@ static NSString * MLDParagraphHeaderSpace = @"　　";
     
     CGPathRef path = CGPathCreateWithRect(rect, NULL);
     
-    CFRange range = CFRangeMake(0, 0);
+    CFRange range;
     
     NSInteger rangeOffset = 0;
     

@@ -30,20 +30,19 @@
 - (void)share:(UIButton *)shareBtn
 {
     NSString *path = [NSString stringWithFormat:@"/wakeup?id=%@",[MLDUserManager sharedManager].currentUserId];
-
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if ([MLDUserManager sharedManager].currentUserId)
     {
         [params addEntriesFromDictionary:@{@"id" : [MLDUserManager sharedManager].currentUserId}];
     }
     [params addEntriesFromDictionary:@{@"scene" : @(MLDSceneTypeOthers)}];
-    
+
     // 先读取缓存的mobid,缓存没有再进行网络请求
     NSString *cacheMobid = [[MLDTool shareInstance] mobidForKeyPath:path];
     NSString *title = @"MobLink 一键唤醒";
     NSString *text = @"移动端场景还原解决方案";
     NSString *image = @"xzy_icon";
-    
+
     if (cacheMobid)
     {
         [[MLDTool shareInstance] shareWithMobId:cacheMobid
@@ -63,7 +62,7 @@
                                                {
                                                    [[MLDTool shareInstance] cacheMobid:mobid forKeyPath:path];
                                                }
-                                               
+
                                                [[MLDTool shareInstance] shareWithMobId:mobid
                                                                                  title:title
                                                                                   text:text

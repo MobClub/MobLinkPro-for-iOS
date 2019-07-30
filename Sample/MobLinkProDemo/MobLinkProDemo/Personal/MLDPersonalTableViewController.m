@@ -169,6 +169,7 @@ static NSString * const staticReuseIdentifier = @"MLDStaticTableViewCell";
             break;
         }
         default:
+            cell = [[UITableViewCell alloc] init];
             break;
     }
     

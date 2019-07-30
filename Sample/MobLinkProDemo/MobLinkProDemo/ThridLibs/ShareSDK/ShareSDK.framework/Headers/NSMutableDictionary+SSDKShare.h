@@ -153,7 +153,7 @@
 #pragma mark - SinaWeibo
 
 /*
- 设置新浪微博分享参数
+ 设置新浪微博分享参数， linkCard分享模式必要参数为 text,title,image,url,type，其中image仅支持网络连接，type为webpage
  
  @param text      文本
  @param title     标题
@@ -178,6 +178,22 @@
                                    objectID:(NSString *)objectID
                              isShareToStory:(BOOL)shareToStory
                                        type:(SSDKContentType)type;
+
+
+/**
+ 新浪微博设置linkcard分享方式
+
+ @param text 描述
+ @param cardTitle 卡片标题
+ @param cardSummary 卡片摘要
+ @param images 图片，只支持网络图片
+ @param url 跳转链接
+ */
+- (void)SSDKSetupSinaWeiboLinkCardShareParamsByText:(NSString *)text
+                                          cardTitle:(NSString *)cardTitle
+                                        cardSummary:(NSString *)cardSummary
+                                             images:(id)images
+                                                url:(NSURL *)url;
 
 
 #pragma mark - Facebook
@@ -963,6 +979,18 @@
                                  file:(NSURL *)file
                      menuDisplayPoint:(CGPoint)point
                                  type:(SSDKContentType)type;
+
+
+#pragma mark - 抖音
+/**
+ *  设置抖音分享参数
+ *
+ *  @param assetLocalIds 分享图片/视频集合, 注：只允许为相册资源且集合传对应的资源localIdentifier，非相册路径
+ *       如相册路径为“assets-library://asset/asset.mp4?id=E7BEC1A7-D60C-4B41-85AB-B8A1606AB338&ext=mp4”，assetLocalIds为@[@"E7BEC1A7-D60C-4B41-85AB-B8A1606AB338"]
+ *  @param type  分享类型，仅支持Image、Video
+ */
+- (void)SSDKSetupDouyinParamesByAssetLocalIds:(NSArray<NSString *> *)assetLocalIds
+                                         type:(SSDKContentType)type;
 
 #pragma mark - Deprecated
 

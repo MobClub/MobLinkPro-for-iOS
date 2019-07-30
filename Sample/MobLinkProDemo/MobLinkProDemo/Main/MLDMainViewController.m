@@ -14,10 +14,6 @@
 
 #import "AppDelegate.h"
 
-@interface MLDMainViewController ()
-
-@end
-
 @implementation MLDMainViewController
 
 - (instancetype)init

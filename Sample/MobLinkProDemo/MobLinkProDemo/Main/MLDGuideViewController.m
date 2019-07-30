@@ -42,7 +42,7 @@
 {
     static NSString *const MLDAlreadyRun = @"MLDAlreadyRun";
     
-    BOOL res = [[NSUserDefaults standardUserDefaults] objectForKey:MLDAlreadyRun];
+    BOOL res = [[[NSUserDefaults standardUserDefaults] objectForKey:MLDAlreadyRun] boolValue];
     if (!res)
     {
         [[NSUserDefaults standardUserDefaults] setObject:@(YES) forKey:MLDAlreadyRun];

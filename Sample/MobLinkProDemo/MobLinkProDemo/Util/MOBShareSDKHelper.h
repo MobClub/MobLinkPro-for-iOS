@@ -17,7 +17,7 @@
 //国内平台
 #define IMPORT_SINA_WEIBO //注释此行则 不开启【 新浪微博 】平台
 #define IMPORT_SUB_QQFriend //注释此行则 不开启【 QQ好友 】平台
-#define IMPORT_SUB_QZone //注释此行则 不开启【 QQ空间 】平台
+//#define IMPORT_SUB_QZone //注释此行则 不开启【 QQ空间 】平台
 #define IMPORT_SUB_WechatSession //注释此行则 不开启【 微信好友 】平台
 #define IMPORT_SUB_WechatTimeline //注释此行则 不开启【 微信朋友圈 】平台
 //#define IMPORT_SUB_WechatFav //注释此行则 不开启【 微信收藏 】平台
@@ -60,9 +60,9 @@
 //#define IMPORT_Reddit //注释此行则 不开启【 Reddit 】平台
 //#define IMPORT_ESurfing //注释此行则 不开启【 天翼 】平台
 ////系统平台
-//#define IMPORT_SMS //注释此行则 不开启【 SMS 】平台
+#define IMPORT_SMS //注释此行则 不开启【 SMS 】平台
 //#define IMPORT_Mail //注释此行则 不开启【 Mail 】平台
-//#define IMPORT_Copy //注释此行则 不开启【 Copy 】平台
+#define IMPORT_Copy //注释此行则 不开启【 Copy 】平台
 //#define IMPORT_Print //注释此行则 不开启【 Print 】平台
 
 
@@ -168,13 +168,13 @@
 */
 #if (defined IMPORT_SUB_QQFriend) || (defined IMPORT_SUB_QZone)
     //AppID
-    #define MOBSSDKQQAppID @"1105479028"
+    #define MOBSSDKQQAppID @"1109411100"
     //AppKey
-    #define MOBSSDKQQAppKey @"HxHozohsRAkSGREY"
+    #define MOBSSDKQQAppKey @"VgLaHCOFwwXVt24c"
     //AuthType
     #define MOBSSDKQQAuthType SSDKAuthorizeTypeBoth
     //useTIM 是否优先使用TIM客户端
-    #define MOBSSDKQQUseTIM YES
+    #define MOBSSDKQQUseTIM NO
     //是否默认返回 UnionID v4.0.2增加
     #define MOBSSDKQQBackUnionID NO
 #endif

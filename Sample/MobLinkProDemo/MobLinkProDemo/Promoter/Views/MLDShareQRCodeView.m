@@ -27,7 +27,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    if ([super initWithFrame:frame])
+    if (self = [super initWithFrame:frame])
     {
         self.backgroundColor = [UIColor whiteColor];
         [self loadSubViewsWithFrame:frame];
@@ -65,6 +65,7 @@
         
         if (cacheMobid)
         {
+            self.mobid = cacheMobid;
             qrLayer.contents = (__bridge id)[UIImage mldCreateQRCodeImageFormString:[NSString stringWithFormat:@"%@/invite/share?id=%@&mobid=%@", baseShareUrl, user.uid, cacheMobid] withSize:qrWidth].CGImage;
         }
         else
@@ -74,6 +75,7 @@
                                                params:params
                                                result:^(NSString *mobid, NSString *domain, NSError *error) {
                                                    // 先缓存mobid,如果有的话
+                                                   weakSelf.mobid = mobid;
                                                    if (mobid)
                                                    {
                                                        [[MLDTool shareInstance] cacheMobid:mobid forKeyPath:path];
