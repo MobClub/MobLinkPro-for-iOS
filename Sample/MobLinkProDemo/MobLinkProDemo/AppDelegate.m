@@ -51,6 +51,11 @@
     
     [MobLink setDelegate:self];
     
+    MLSDKScene *scene = [MLSDKScene sceneForPath:@"/demo/test/123" params:@{@"key11": @"value11"}];
+    [MobLink getMobId:scene result:^(NSString * _Nullable mobid, NSString * _Nullable domain, NSError * _Nullable error) {
+        NSLog(@"------> mobid: %@  domain:%@", mobid, domain);
+    }];
+    
     return YES;
 }
 

@@ -117,7 +117,7 @@
 		2EFEB9BD21CA505D00A18109 /* MLDReadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB9BC21CA505D00A18109 /* MLDReadTableViewCell.m */; };
 		2EFEB9C021CA50D900A18109 /* MLDReadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB9BF21CA50D900A18109 /* MLDReadView.m */; };
 		2EFEB9C321CA64AA00A18109 /* MLDReadConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB9C221CA64A900A18109 /* MLDReadConfig.m */; };
-		5E108F7D22F0548C003440CB /* MobLinkPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E108F7C22F0548B003440CB /* MobLinkPro.framework */; };
+		5E29695422BB93CC00E9C937 /* MobLinkPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E29695322BB93CB00E9C937 /* MobLinkPro.framework */; };
 		5ECF4DAD22CB1FCB00867F9C /* MOBShareSDKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF4DAB22CB1FCB00867F9C /* MOBShareSDKHelper.m */; };
 		5ECF4DCE22CB1FDE00867F9C /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5ECF4DB222CB1FDE00867F9C /* WeiboSDK.bundle */; };
 		5ECF4DCF22CB1FDE00867F9C /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECF4DB322CB1FDE00867F9C /* libWeiboSDK.a */; };
@@ -357,7 +357,7 @@
 		2EFEB9BF21CA50D900A18109 /* MLDReadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLDReadView.m; sourceTree = "<group>"; };
 		2EFEB9C121CA64A900A18109 /* MLDReadConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLDReadConfig.h; sourceTree = "<group>"; };
 		2EFEB9C221CA64A900A18109 /* MLDReadConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLDReadConfig.m; sourceTree = "<group>"; };
-		5E108F7C22F0548B003440CB /* MobLinkPro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobLinkPro.framework; path = ../../../MobLink/tags/v3.3.0/SDK/MobLinkPro/MobLinkPro.framework; sourceTree = "<group>"; };
+		5E29695322BB93CB00E9C937 /* MobLinkPro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobLinkPro.framework; path = "../../Build/Products/Debug-iphoneos/MobLinkPro.framework"; sourceTree = "<group>"; };
 		5ECF4DAB22CB1FCB00867F9C /* MOBShareSDKHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBShareSDKHelper.m; sourceTree = "<group>"; };
 		5ECF4DAC22CB1FCB00867F9C /* MOBShareSDKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBShareSDKHelper.h; sourceTree = "<group>"; };
 		5ECF4DB222CB1FDE00867F9C /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
@@ -410,7 +410,7 @@
 				5ECF4DD722CB1FDE00867F9C /* ShareSDKUI.framework in Frameworks */,
 				5ECF4DDC22CB1FDE00867F9C /* FacebookConnector.framework in Frameworks */,
 				059506E114BB11E98C99AC87 /* libz.tbd in Frameworks */,
-				5E108F7D22F0548C003440CB /* MobLinkPro.framework in Frameworks */,
+				5E29695422BB93CC00E9C937 /* MobLinkPro.framework in Frameworks */,
 				059512CA14BB11E9828FAC87 /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,7 +709,7 @@
 		2E78C09021E6E92B0032A8E6 /* MobLinkPro */ = {
 			isa = PBXGroup;
 			children = (
-				5E108F7C22F0548B003440CB /* MobLinkPro.framework */,
+				5E29695322BB93CB00E9C937 /* MobLinkPro.framework */,
 			);
 			path = MobLinkPro;
 			sourceTree = "<group>";
