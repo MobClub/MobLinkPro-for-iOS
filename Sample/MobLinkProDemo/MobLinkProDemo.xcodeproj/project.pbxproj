@@ -117,9 +117,9 @@
 		2EFEB9BD21CA505D00A18109 /* MLDReadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB9BC21CA505D00A18109 /* MLDReadTableViewCell.m */; };
 		2EFEB9C021CA50D900A18109 /* MLDReadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB9BF21CA50D900A18109 /* MLDReadView.m */; };
 		2EFEB9C321CA64AA00A18109 /* MLDReadConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB9C221CA64A900A18109 /* MLDReadConfig.m */; };
+		5E29695422BB93CC00E9C937 /* MobLinkPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E29695322BB93CB00E9C937 /* MobLinkPro.framework */; };
 		5ECF4DAD22CB1FCB00867F9C /* MOBShareSDKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF4DAB22CB1FCB00867F9C /* MOBShareSDKHelper.m */; };
 		5ECF4DE122CB582400867F9C /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECF4DE022CB582400867F9C /* MOBFoundation.framework */; };
-		D5301B45237A4F7200C76BF0 /* MobLinkPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5301B44237A4F7200C76BF0 /* MobLinkPro.framework */; };
 		D5512B522330D1F00035B8FD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5512B512330D1F00035B8FD /* SceneDelegate.m */; };
 		D56DEF72235180C700880530 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF6C235180C700880530 /* TencentOpenAPI.framework */; };
 		D56DEF73235180C700880530 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D56DEF6E235180C700880530 /* WeiboSDK.bundle */; };
@@ -397,10 +397,10 @@
 		2EFEB9BF21CA50D900A18109 /* MLDReadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLDReadView.m; sourceTree = "<group>"; };
 		2EFEB9C121CA64A900A18109 /* MLDReadConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLDReadConfig.h; sourceTree = "<group>"; };
 		2EFEB9C221CA64A900A18109 /* MLDReadConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLDReadConfig.m; sourceTree = "<group>"; };
+		5E29695322BB93CB00E9C937 /* MobLinkPro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobLinkPro.framework; path = "../../Build/Products/Debug-iphoneos/MobLinkPro.framework"; sourceTree = "<group>"; };
 		5ECF4DAB22CB1FCB00867F9C /* MOBShareSDKHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBShareSDKHelper.m; sourceTree = "<group>"; };
 		5ECF4DAC22CB1FCB00867F9C /* MOBShareSDKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBShareSDKHelper.h; sourceTree = "<group>"; };
 		5ECF4DE022CB582400867F9C /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
-		D5301B44237A4F7200C76BF0 /* MobLinkPro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobLinkPro.framework; sourceTree = "<group>"; };
 		D5512B502330D1F00035B8FD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		D5512B512330D1F00035B8FD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		D56DEF6C235180C700880530 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
@@ -512,12 +512,12 @@
 				D56DEFB62351B0EF00880530 /* WeworkConnector.framework in Frameworks */,
 				059506E114BB11E98C99AC87 /* libz.tbd in Frameworks */,
 				D5AA1C1123516FC300615394 /* ShareSDKUI.framework in Frameworks */,
+				5E29695422BB93CC00E9C937 /* MobLinkPro.framework in Frameworks */,
 				D56DEFB02351B0EF00880530 /* CMCCConnector.framework in Frameworks */,
 				D56DEFB92351B0EF00880530 /* SMSConnector.framework in Frameworks */,
 				D56DEFB32351B0EF00880530 /* PocketConnector.framework in Frameworks */,
 				D5AA1C3F2351724100615394 /* TencentOpenAPI.framework in Frameworks */,
 				D56DEFBD2351B0EF00880530 /* WechatConnector.framework in Frameworks */,
-				D5301B45237A4F7200C76BF0 /* MobLinkPro.framework in Frameworks */,
 				D56DEFB52351B0EF00880530 /* DouBanConnector.framework in Frameworks */,
 				D56DEFC92351B0EF00880530 /* FlickrConnector.framework in Frameworks */,
 				D56DEFA82351B0EF00880530 /* DropboxConnector.framework in Frameworks */,
@@ -830,7 +830,7 @@
 		2E78C09021E6E92B0032A8E6 /* MobLinkPro */ = {
 			isa = PBXGroup;
 			children = (
-				D5301B44237A4F7200C76BF0 /* MobLinkPro.framework */,
+				5E29695322BB93CB00E9C937 /* MobLinkPro.framework */,
 			);
 			path = MobLinkPro;
 			sourceTree = "<group>";
@@ -1532,7 +1532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MobLinkProDemo/MobLinkProDemo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = LW5266U92D;
 				ENABLE_HARDENED_RUNTIME = NO;
@@ -1590,9 +1590,9 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.MobLinkPro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.MobLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = MobLinkProInHouse;
+				PROVISIONING_PROFILE_SPECIFIER = MobLinkDevDemo1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1602,7 +1602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MobLinkProDemo/MobLinkProDemo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = LW5266U92D;
 				ENABLE_HARDENED_RUNTIME = NO;
@@ -1659,9 +1659,9 @@
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.MobLinkPro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.MobLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = MobLinkProInHouse;
+				PROVISIONING_PROFILE_SPECIFIER = MobLinkDevDemo1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
