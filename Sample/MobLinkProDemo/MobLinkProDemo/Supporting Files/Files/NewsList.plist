@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>source</key>
+		<string>新闻网 12-23 11:00</string>
+		<key>content</key>
+		<string>中国国家主席习近平的到来，为这个小镇增加了不少兴奋点。当地时间17日上午，习近平主席的主旨演讲拉开了2017年达沃斯论坛的大幕。“‘这是最好的时代，也是最坏的时代。’英国文学家狄更斯这样描述工业革命发生后的世界。今天，我们也生活在一个矛盾的世界之中。我想从经济全球化问题切入，谈谈我对世界经济的看法。”习近平开宗明义、直抒胸臆。</string>
+		<key>imageName</key>
+		<string>xw01.png</string>
+		<key>subTitle</key>
+		<string>置顶 专题 83人浏览</string>
+		<key>title</key>
+		<string>习式妙语：达沃斯聆听中国</string>
+	</dict>
+	<dict>
+		<key>source</key>
+		<string>新闻网 12-23 11:30</string>
+		<key>content</key>
+		<string>辽宁省第十二届人大第八次会议21日选举马宝贵等40人为第十二届全国人民代表大会代表。在21日的选举中，参加辽宁省第十二届人大第八次会议第三次全体会议的583名辽宁省人大代表，从48名候选人中，选举了马宝贵等40人为全国人大代表。按照相关法律规定，这40人的全国人大代表的代表资格需报全国人大常委会代表资格审查委员会审查后，报全国人大常委会通过确认并公告。</string>
+		<key>imageName</key>
+		<string>xw02.png</string>
+		<key>subTitle</key>
+		<string>42人浏览</string>
+		<key>title</key>
+		<string>辽宁选举40名全国人大代表去年45人因贿选无效</string>
+	</dict>
+	<dict>
+		<key>source</key>
+		<string>新闻网 12-23 11:45</string>
+		<key>content</key>
+		<string>“中国已经没有那么多潜在的农业人口可以向城市转移了”，上海金融与法律研究院研究员聂日明指出，很多已经在城市化中的农民，未被统计为城市常住人口，实际上，若政策没有大的改变，农民进城的脚步已经停止了。1月20日，国家统计局公布2016年国民经济运行情况。数据显示，2016年末, 全国人户分离人口（居住地和户口登记地不在同一个乡镇街道且离开户口登记地半年以上的人口）为2.92亿人，比上年末减少203万人，其中，全国流动人口比上年末减少了171万人。</string>
+		<key>imageName</key>
+		<string>xw03.png</string>
+		<key>subTitle</key>
+		<string>442人浏览</string>
+		<key>title</key>
+		<string>学者称农民进城脚步或已停滞各城市人口争夺开战</string>
+	</dict>
+</array>
+</plist>

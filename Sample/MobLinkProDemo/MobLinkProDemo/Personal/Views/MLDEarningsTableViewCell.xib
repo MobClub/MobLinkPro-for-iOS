@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MLDEarningsTableViewCell" rowHeight="241" id="KGk-i7-Jjw" customClass="MLDEarningsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="494" height="241"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="494" height="240.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GU3-D4-TIA">
+                        <rect key="frame" x="15" y="20" width="224.5" height="180.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="累计推广" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dna-fM-Km9">
+                                <rect key="frame" x="0.0" y="0.0" width="224.5" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RML-Qe-8Kb">
+                                <rect key="frame" x="0.0" y="72" width="224.5" height="108.5"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RML-Qe-8Kb" firstAttribute="leading" secondItem="GU3-D4-TIA" secondAttribute="leading" id="Emp-oG-ZUW"/>
+                            <constraint firstItem="Dna-fM-Km9" firstAttribute="leading" secondItem="GU3-D4-TIA" secondAttribute="leading" id="Mga-nN-ktN"/>
+                            <constraint firstItem="Dna-fM-Km9" firstAttribute="height" secondItem="GU3-D4-TIA" secondAttribute="height" multiplier="0.4" id="NWw-fj-W99"/>
+                            <constraint firstAttribute="trailing" secondItem="Dna-fM-Km9" secondAttribute="trailing" id="Odf-iS-DsB"/>
+                            <constraint firstItem="RML-Qe-8Kb" firstAttribute="height" secondItem="GU3-D4-TIA" secondAttribute="height" multiplier="0.6" id="iFv-vE-Lio"/>
+                            <constraint firstItem="Dna-fM-Km9" firstAttribute="top" secondItem="GU3-D4-TIA" secondAttribute="top" id="qj9-Lk-wnF"/>
+                            <constraint firstAttribute="bottom" secondItem="RML-Qe-8Kb" secondAttribute="bottom" id="v8d-gb-bmD"/>
+                            <constraint firstAttribute="trailing" secondItem="RML-Qe-8Kb" secondAttribute="trailing" id="zBq-dn-whL"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EL5-Dd-kXz">
+                        <rect key="frame" x="254.5" y="20" width="224.5" height="180.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="累计收益" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quc-5P-pFD">
+                                <rect key="frame" x="0.0" y="0.0" width="224.5" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnd-Nl-1Gz">
+                                <rect key="frame" x="0.0" y="72" width="224.5" height="108.5"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="quc-5P-pFD" firstAttribute="leading" secondItem="EL5-Dd-kXz" secondAttribute="leading" id="4J5-nn-QvO"/>
+                            <constraint firstAttribute="trailing" secondItem="quc-5P-pFD" secondAttribute="trailing" id="5SZ-cP-zKT"/>
+                            <constraint firstItem="quc-5P-pFD" firstAttribute="top" secondItem="EL5-Dd-kXz" secondAttribute="top" id="BrC-g8-k35"/>
+                            <constraint firstAttribute="bottom" secondItem="fnd-Nl-1Gz" secondAttribute="bottom" id="GT9-mK-LSf"/>
+                            <constraint firstItem="quc-5P-pFD" firstAttribute="height" secondItem="EL5-Dd-kXz" secondAttribute="height" multiplier="0.4" id="QeL-rH-vAv"/>
+                            <constraint firstItem="fnd-Nl-1Gz" firstAttribute="height" secondItem="EL5-Dd-kXz" secondAttribute="height" multiplier="0.6" id="UB8-RX-lFB"/>
+                            <constraint firstItem="fnd-Nl-1Gz" firstAttribute="leading" secondItem="EL5-Dd-kXz" secondAttribute="leading" id="ZCx-WQ-HAu"/>
+                            <constraint firstAttribute="trailing" secondItem="fnd-Nl-1Gz" secondAttribute="trailing" id="tPG-mH-xn3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="EL5-Dd-kXz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="4ON-yg-qWh"/>
+                    <constraint firstItem="GU3-D4-TIA" firstAttribute="width" secondItem="EL5-Dd-kXz" secondAttribute="width" id="5mf-ZX-Mno"/>
+                    <constraint firstAttribute="bottom" secondItem="GU3-D4-TIA" secondAttribute="bottom" constant="40" id="Kr3-YX-Pti"/>
+                    <constraint firstItem="GU3-D4-TIA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="QRz-Fg-mmG"/>
+                    <constraint firstAttribute="bottom" secondItem="EL5-Dd-kXz" secondAttribute="bottom" constant="40" id="U4R-yX-3Rz"/>
+                    <constraint firstItem="GU3-D4-TIA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Wzb-NE-6Ep"/>
+                    <constraint firstAttribute="trailing" secondItem="EL5-Dd-kXz" secondAttribute="trailing" constant="15" id="Xw0-sX-w0O"/>
+                    <constraint firstItem="EL5-Dd-kXz" firstAttribute="leading" secondItem="GU3-D4-TIA" secondAttribute="trailing" constant="15" id="spu-Xd-7bT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="earningsLabel" destination="fnd-Nl-1Gz" id="0TZ-6H-uNK"/>
+                <outlet property="earningsTitleLabel" destination="quc-5P-pFD" id="67P-xN-4Z5"/>
+                <outlet property="leftView" destination="GU3-D4-TIA" id="1rv-Nq-hQ0"/>
+                <outlet property="promoteLabel" destination="RML-Qe-8Kb" id="0I9-kh-QYN"/>
+                <outlet property="promoteTitleLabel" destination="Dna-fM-Km9" id="wXW-9v-pCV"/>
+                <outlet property="rightView" destination="EL5-Dd-kXz" id="dkT-fH-p6P"/>
+            </connections>
+            <point key="canvasLocation" x="28.800000000000001" y="135.38230884557723"/>
+        </tableViewCell>
+    </objects>
+</document>
