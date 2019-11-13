@@ -29,8 +29,9 @@
 			<string>mobtool_qq</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>QQ41eaeb2b</string>
+				<string>tencent1105914667</string>
 				<string>QQ41E44574</string>
-				<string>tencent1109411100</string>
 			</array>
 		</dict>
 		<dict>
