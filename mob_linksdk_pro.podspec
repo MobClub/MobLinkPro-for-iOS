@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 	s.license             = 'Copyright © 2012-2017 mob.com'
 	s.author              = { "MobProducts" => "mobproducts@163.com" }
 	s.homepage            = 'http://www.mob.com'
-	s.source              = { :http => 'https://dev.ios.mob.com/files/download/moblinkpro/MobLinkPro_For_iOS_v3.3.2.zip' }
+	s.source              = { :http => 'https://dev.ios.mob.com/files/download/moblinkpro/MobLinkPro_For_iOS_v3.3.3.zip' }
 	s.platform            = :ios, '8.0'
 	s.frameworks          = "ImageIO", "JavaScriptCore"
 	s.libraries           = "icucore", "z", "c++", "sqlite3"
