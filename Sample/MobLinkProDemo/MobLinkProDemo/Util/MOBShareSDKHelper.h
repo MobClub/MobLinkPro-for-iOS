@@ -168,9 +168,9 @@
 */
 #if (defined IMPORT_SUB_QQFriend) || (defined IMPORT_SUB_QZone)
     //AppID
-    #define MOBSSDKQQAppID @"1105914667"
+    #define MOBSSDKQQAppID @"1109411100"
     //AppKey
-    #define MOBSSDKQQAppKey @"csEzGDYWmrRRnmCD"
+    #define MOBSSDKQQAppKey @"VgLaHCOFwwXVt24c"
     //AuthType
     #define MOBSSDKQQAuthType SSDKAuthorizeTypeBoth
     //useTIM 是否优先使用TIM客户端

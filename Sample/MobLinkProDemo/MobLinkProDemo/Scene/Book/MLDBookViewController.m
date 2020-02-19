@@ -138,6 +138,12 @@
         [[MLDTool shareInstance] getMobidWithPath:path
                                            params:params
                                            result:^(NSString *mobid, NSString *domain, NSError *error) {
+            if (error) {
+                UIAlertControllerAlertCreate(@"错误", [NSString stringWithFormat:@"%@",error.userInfo])
+                .addCancelAction(@"OK")
+                .present();
+                return;
+            }
                                                // 先缓存mobid,如果有的话
                                                if (mobid)
                                                {

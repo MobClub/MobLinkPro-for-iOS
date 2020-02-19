@@ -8,9 +8,8 @@
 
 #ifndef MobLinkDemo_pch
 #define MobLinkDemo_pch
-#import "MOBApplication.h"
 #import <MOBFoundation/MOBFoundation.h>
-
+#import "SSDKCategory.h"
 #import "MLDDefine.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width

@@ -22,6 +22,7 @@
 
 #import <MobLinkPro/MobLink.h>
 
+#import "MOBPolicyManager.h"
 @interface MLDHomeCollectionViewController ()
 
 @property (strong, nonatomic) NSArray *dataArray;
@@ -41,10 +42,11 @@ static NSString * const homeReuseIdentifier = @"MLDHomeCollectionViewCell";
     [self.collectionView registerNib:[UINib nibWithNibName:@"MLDHomeCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:homeReuseIdentifier];
     
     self.collectionView.showsVerticalScrollIndicator = NO;
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer"];
     
-    [self createHeaderView];
     
-    [self createVersionLabel];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -68,34 +70,11 @@ static NSString * const homeReuseIdentifier = @"MLDHomeCollectionViewCell";
         flowLayout.itemSize = CGSizeMake((SCREEN_WIDTH - 60) / 2.0, (SCREEN_WIDTH - 60) / 2.0);
         flowLayout.minimumLineSpacing = 20;
         flowLayout.minimumInteritemSpacing = 20;
-        flowLayout.sectionInset = UIEdgeInsetsMake(84, 20, 60, 20);
+        flowLayout.sectionInset = UIEdgeInsetsMake(30, 15, 0, 15);
+        flowLayout.headerReferenceSize = CGSizeMake(0, kNavigationBarHeight);
+        flowLayout.footerReferenceSize = CGSizeMake(0, 80);
     }
     return self;
-}
-
-- (void)createHeaderView
-{
-    CGRect origFrame = self.navigationController.navigationBar.frame;
-    
-    UILabel *headerView = [[UILabel alloc] init];
-    headerView.frame = CGRectMake(origFrame.origin.x, origFrame.origin.y, origFrame.size.width, origFrame.size.height + 40.0);
-    headerView.text = @"MobLink";
-    headerView.textAlignment = NSTextAlignmentCenter;
-    headerView.font = [UIFont fontWithName:@"AvenirNext-Bold" size:30];
-    headerView.textColor = [UIColor colorWithRed:23/255.0 green:25/255.0 blue:34/255.0 alpha:1/1.0];
-    
-    [self.view addSubview:headerView];
-}
-
-- (void)createVersionLabel
-{
-    UILabel *versionLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, SCREEN_HEIGHT - MOBLINK_TabbarSafeBottomMargin - 90, SCREEN_WIDTH - 200, 20)];
-    versionLabel.text = [NSString stringWithFormat:@"%@ 版本", [MobLink sdkVer]];
-    versionLabel.textAlignment = NSTextAlignmentCenter;
-    versionLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:14];
-    versionLabel.textColor = [UIColor colorWithRed:157/255.0 green:164/255.0 blue:184/255.0 alpha:1/1.0];
-    
-    [self.view addSubview:versionLabel];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -123,6 +102,38 @@ static NSString * const homeReuseIdentifier = @"MLDHomeCollectionViewCell";
     return cell;
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if (kind == UICollectionElementKindSectionHeader) {
+        UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
+        if ([headerView viewWithTag:100]) {
+            return headerView;
+        }
+        UILabel *headerLabel = [[UILabel alloc] init];
+        headerLabel.frame = CGRectMake(0,10 , SSDK_WIDTH, 30);
+        headerLabel.text = @"MobLink";
+        headerLabel.tag = 100;
+        headerLabel.textAlignment = NSTextAlignmentCenter;
+        headerLabel.font = [UIFont fontWithName:@"AvenirNext-Bold" size:30];
+        headerLabel.textColor = [UIColor colorWithRed:23/255.0 green:25/255.0 blue:34/255.0 alpha:1/1.0];
+        
+        [headerView addSubview:headerLabel];
+        return headerView;
+    }else{
+        UICollectionReusableView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"footer" forIndexPath:indexPath];
+        if ([footer viewWithTag:100]) {
+            return footer;
+        }
+        UILabel *versionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, SCREEN_WIDTH, 20)];
+        versionLabel.text = [NSString stringWithFormat:@"%@ 版本", [MobLink sdkVer]];
+        versionLabel.textAlignment = NSTextAlignmentCenter;
+        
+        versionLabel.font = Font(PingFangReguler,   14);
+        versionLabel.textColor = [UIColor colorWithRed:157/255.0 green:164/255.0 blue:184/255.0 alpha:1/1.0];
+        versionLabel.tag = 100;
+        [footer addSubview:versionLabel];
+        return footer;
+    }
+}
 #pragma mark <UICollectionViewDelegate>
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath

@@ -10,7 +10,7 @@
 
 #import "AppDelegate.h"
 #import "MLDMainViewController.h"
-#import "MOBApplication.h"
+
 @interface MLDGuideViewController ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIPageControl *pageControl;
@@ -86,7 +86,7 @@
         titleLabel.bounds = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT * 0.2);
         titleLabel.center = CGPointMake(viewCenter.x + SCREEN_WIDTH * i, viewCenter.y + SCREEN_HEIGHT * 0.23);
         
-        titleLabel.font =[UIFont fontWithName:@"PingFangSC-Semibold" size:27];
+        titleLabel.font = Font(PingFangSemibold, 27);
         titleLabel.textColor = [UIColor colorWithRed:23/255.0 green:25/255.0 blue:34/255.0 alpha:1.0];
         
         UILabel *contentLabel = [[UILabel alloc] init];
@@ -98,7 +98,7 @@
         contentLabel.bounds = CGRectMake(0, 0, SCREEN_WIDTH * 0.6, SCREEN_HEIGHT * 0.2);
         contentLabel.center = CGPointMake(viewCenter.x + SCREEN_WIDTH * i, viewCenter.y + SCREEN_HEIGHT * 0.3);
         
-        contentLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:15];
+        contentLabel.font = Font(PingFangReguler, 15);
         contentLabel.textColor = [UIColor colorWithRed:23/255.0 green:25/255.0 blue:34/255.0 alpha:1.0];
         
         UIButton *skipBtn = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -156,7 +156,7 @@
 - (void)enterToMainViewController
 {
    
-    [MOBApplication sharedApplication].window.rootViewController = [[MLDMainViewController alloc] init];
+    [SSDKScenePackage defaultPackage].window.rootViewController = [[MLDMainViewController alloc] init];
     
     CATransition *animation = [CATransition animation];
     
@@ -170,9 +170,9 @@
     
     animation.fillMode = kCAFillModeForwards;
     
-    [[MOBApplication sharedApplication].window.layer addAnimation:animation forKey:nil];
+    [[SSDKScenePackage defaultPackage].window.layer addAnimation:animation forKey:nil];
     
-    [[MOBApplication sharedApplication].window makeKeyAndVisible];
+    [[SSDKScenePackage defaultPackage].window makeKeyAndVisible];
 }
 
 #pragma mark - scrollview delegate
