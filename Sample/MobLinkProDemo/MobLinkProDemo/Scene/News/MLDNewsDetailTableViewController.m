@@ -113,7 +113,7 @@ static NSString *const newsDetailReuseId = @"newsDetailReuseId";
         newsID = [NSString stringWithFormat:@"%ld", (long)self.index];
         path = [NSString stringWithFormat:@"/scene/news?id=%ld",(long)self.index];
     }
-
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if ([MLDUserManager sharedManager].currentUserId)
     {
@@ -135,26 +135,34 @@ static NSString *const newsDetailReuseId = @"newsDetailReuseId";
                                            text:text
                                           image:image
                                            path:path
-                                          onView:shareBtn];
+                                         onView:shareBtn];
     }
     else
     {
         [[MLDTool shareInstance] getMobidWithPath:@"/scene/news"
                                            params:params
                                            result:^(NSString *mobid, NSString *domain, NSError *error) {
-                                               // 先缓存mobid,如果有的话
-                                               if (mobid)
-                                               {
-                                                   [[MLDTool shareInstance] cacheMobid:mobid forKeyPath:path];
-                                               }
-                                               
-                                               [[MLDTool shareInstance] shareWithMobId:mobid
-                                                                                 title:title
-                                                                                  text:text
-                                                                                 image:image
-                                                                                  path:path
-                                                                                onView:shareBtn];
-                                           }];
+            if (error) {
+                UIAlertControllerAlertCreate(@"错误", [NSString stringWithFormat:@"%@",error.userInfo])
+                .addCancelAction(@"OK")
+                .present();
+                return;
+            }
+            
+            // 先缓存mobid,如果有的话
+            
+            if (mobid)
+            {
+                [[MLDTool shareInstance] cacheMobid:mobid forKeyPath:path];
+            }
+            
+            [[MLDTool shareInstance] shareWithMobId:mobid
+                                              title:title
+                                               text:text
+                                              image:image
+                                               path:path
+                                             onView:shareBtn];
+        }];
     }
     
 }

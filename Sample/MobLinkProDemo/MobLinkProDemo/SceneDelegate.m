@@ -10,6 +10,7 @@
 #import "SceneDelegate.h"
 #import "MLDMainViewController.h"
 #import "MLDGuideViewController.h"
+#import "MOBPolicyManager.h"
 #ifndef __IPHONE_13_0
 
 @protocol UIWindowSceneDelegate <NSObject>
@@ -30,15 +31,8 @@
    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
    self.window.backgroundColor = [UIColor whiteColor];
    [self.window makeKeyAndVisible];
-    ((void (*)(id, SEL, id))objc_msgSend)(self.window,sel_registerName("setWindowScene:"),scene);
-    if ([MLDGuideViewController isFirstRun])
-    {
-        self.window.rootViewController = [[MLDGuideViewController alloc] init];
-    }
-    else
-    {
-        self.window.rootViewController = [[MLDMainViewController alloc] init];
-    }
+   [self.window showOnScene:scene];
+   
 }
 - (void)sceneDidDisconnect:(UIScene *)scene API_AVAILABLE(ios(13.0)){
     

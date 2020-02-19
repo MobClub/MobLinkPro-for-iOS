@@ -221,10 +221,10 @@
 {
     _alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _alertWindow.windowLevel = UIWindowLevelAlert;
-//    [_alertWindow makeKeyAndVisible];
+
     _alertWindow.hidden = NO;
-    [[MOBApplication sharedApplication] showWindow:_alertWindow];
-    [_alertWindow addSubview:self];
+    [_alertWindow showOnCurrentScene];
+
     
     switch (style)
     {

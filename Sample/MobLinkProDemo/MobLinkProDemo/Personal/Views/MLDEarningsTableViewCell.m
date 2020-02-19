@@ -46,7 +46,7 @@
     
     [promoteTitle addAttributes:@{
                                    NSForegroundColorAttributeName : [UIColor colorWithRed:157/255.0 green:164/255.0 blue:184/255.0 alpha:1/1.0],
-                                   NSFontAttributeName : [UIFont fontWithName:@"PingFangSC-Semibold" size:16]
+                                   NSFontAttributeName : Font(PingFangSemibold,   16),
                                    }
                            range:NSMakeRange(0, [promoteTitle length])];
     
@@ -65,7 +65,7 @@
     
     [earningsTitle addAttributes:@{
                                    NSForegroundColorAttributeName : [UIColor colorWithRed:157/255.0 green:164/255.0 blue:184/255.0 alpha:1/1.0],
-                                   NSFontAttributeName : [UIFont fontWithName:@"PingFangSC-Semibold" size:16]
+                                   NSFontAttributeName : Font(PingFangSemibold,   12),
                                    }
                            range:NSMakeRange(0, [earningsTitle length])];
     

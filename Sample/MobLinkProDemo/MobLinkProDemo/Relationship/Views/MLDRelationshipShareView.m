@@ -62,7 +62,7 @@
         
         [tipArray[i] addAttributes:@{
                                      NSForegroundColorAttributeName : [UIColor colorWithRed:23/255.0 green:25/255.0 blue:34/255.0 alpha:1/1.0],
-                                     NSFontAttributeName : [UIFont fontWithName:@"PingFangSC-Regular" size:16],
+                                     NSFontAttributeName :Font(PingFangReguler,   16),
                                      NSParagraphStyleAttributeName : paragraphStyle
                                      }
                              range:NSMakeRange(0, [tipArray[i] length])];

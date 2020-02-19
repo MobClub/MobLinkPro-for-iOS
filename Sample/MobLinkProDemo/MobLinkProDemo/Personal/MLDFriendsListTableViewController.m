@@ -129,7 +129,7 @@ static NSString * const friendsReuseIdentifier = @"MLDFriendsListTableViewCell";
     label.frame = CGRectMake(15, 0, 96, 40);
     label.text = @"全部粉丝";
     label.textAlignment = NSTextAlignmentLeft;
-    label.font = [UIFont fontWithName:@"PingFangSC-Regular" size:14];
+    label.font = Font(PingFangReguler,  14);
     label.textColor = [UIColor colorWithRed:157/255.0 green:164/255.0 blue:184/255.0 alpha:1/1.0];
     [view addSubview:label];
     return view;

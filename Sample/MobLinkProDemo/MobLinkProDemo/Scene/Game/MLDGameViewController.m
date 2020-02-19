@@ -162,7 +162,7 @@
     
     self.nickNameF = [[UIButton alloc] initWithFrame:CGRectMake(17, CGRectGetHeight([UIScreen mainScreen].bounds) / 2 - 34, 73, 20)];
     self.nickNameF.layer.contents = (__bridge id)[UIImage imageNamed:@"xmp"].CGImage;
-    self.nickNameF.titleLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:13];
+    self.nickNameF.titleLabel.font = Font(PingFangReguler,   13);
     
     [self.view addSubview:self.homeownerView];
     [self.view addSubview:viewF];
@@ -180,7 +180,7 @@
     
     self.nickNameS = [[UIButton alloc] initWithFrame:CGRectMake(17, CGRectGetHeight([UIScreen mainScreen].bounds) / 2 + 66, 73, 20)];
     self.nickNameS.layer.contents = (__bridge id)[UIImage imageNamed:@"xmp"].CGImage;
-    self.nickNameS.titleLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:13];
+    self.nickNameS.titleLabel.font = Font(PingFangReguler,   13);
     
     [self.view addSubview:self.userSView];
     [self.view addSubview:viewS];
@@ -261,6 +261,12 @@
         [[MLDTool shareInstance] getMobidWithPath:@"/scene/game"
                                            params:params
                                            result:^(NSString *mobid, NSString *domain, NSError *error) {
+            if (error) {
+                UIAlertControllerAlertCreate(@"错误", [NSString stringWithFormat:@"%@",error.userInfo])
+                .addCancelAction(@"OK")
+                .present();
+                return;
+            }
                                                // 先缓存mobid,如果有的话
                                                if (mobid)
                                                {

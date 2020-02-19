@@ -55,7 +55,7 @@
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(labelW * idx, 0, labelW, labelH)];
         label.text = [NSString stringWithFormat:@"%@", dataDict[obj]];
         label.textAlignment = NSTextAlignmentCenter;
-        label.font = [UIFont fontWithName:@"PingFangSC-Regular" size:15];
+        label.font = Font(PingFangReguler,   15);
         
         if (idx == count - 1)
         {

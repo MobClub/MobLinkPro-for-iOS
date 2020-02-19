@@ -100,14 +100,14 @@
     titleLabel.frame = CGRectMake(0, SCREEN_WIDTH * 0.3 + 10, centerW, 40);
     titleLabel.text = @"MobLink";
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:30];
+    titleLabel.font = Font(PingFangSemibold,   30);
     titleLabel.textColor = [UIColor colorWithRed:23/255.0 green:25/255.0 blue:34/255.0 alpha:1/1.0];
     
     UILabel *subTitleLabel = [[UILabel alloc] init];
     subTitleLabel.frame = CGRectMake(0, SCREEN_WIDTH * 0.3 + 60, centerW, 40);
     subTitleLabel.text = @"移动端场景还原解决方案";
     subTitleLabel.textAlignment = NSTextAlignmentCenter;
-    subTitleLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:17];
+    subTitleLabel.font = Font(PingFangReguler,   17);
     subTitleLabel.textColor = [UIColor colorWithRed:23/255.0 green:25/255.0 blue:34/255.0 alpha:1/1.0];
     
     UIButton *shareBtn = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -116,7 +116,7 @@
     shareBtn.backgroundColor = [UIColor colorWithRed:50/255.0 green:102/255.0 blue:255/255.0 alpha:1/1.0];
 
     NSDictionary *attributes = @{
-                                 NSFontAttributeName : [UIFont fontWithName:@"PingFangSC-Semibold" size:17],
+                                 NSFontAttributeName : Font(PingFangSemibold,   17),
                                  NSForegroundColorAttributeName : [UIColor whiteColor]
                                  };
     NSAttributedString *attrTitle = [[NSAttributedString alloc] initWithString:@"立即使用" attributes:attributes];
