@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 	s.author              = { "MobProducts" => "mobproducts@163.com" }
 	s.homepage            = 'http://www.mob.com'
 
-	s.source              = { :https => 'https://dev.ios.mob.com/files/download/moblinkpro/MobLinkPro_For_iOS_v3.3.4.zip' }
+	s.source              = { :http => 'http://dev.ios.mob.com/files/download/moblinkpro/MobLinkPro_For_iOS_v3.3.4.zip' }
 
 	s.platform            = :ios, '8.0'
 	s.frameworks          = "ImageIO", "JavaScriptCore"
