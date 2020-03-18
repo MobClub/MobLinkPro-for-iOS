@@ -31,7 +31,7 @@
     
     self.titleLabel.text = dict[@"title"];
     self.titleLabel.textColor = [UIColor colorWithRed:23/255.0 green:25/255.0 blue:34/255.0 alpha:1.0];
-    self.titleLabel.font = [UIFont fontWithName:@"PingFangTC-Semibold" size:18];
+    self.titleLabel.font = Font(PingFangSemibold, 18);
     
     self.imageV.layer.contents = (__bridge id)[UIImage imageNamed:dict[@"image"]].CGImage;
     self.imageV.layer.contentsGravity = kCAGravityResizeAspect;

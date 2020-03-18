@@ -13,6 +13,8 @@
 #define AlertText_H     150.0f
 #define AlertBtn_H      40.0f
 
+static UIWindow * alertGlobeWindow = nil;
+
 @interface MLDAlertView()
 
 @property (copy, nonatomic) MLDAlertClickButtonBlock block;
@@ -192,6 +194,7 @@
 {
     _alertWindow.hidden = YES;
     [self removeFromSuperview];
+    alertGlobeWindow = nil;
 }
 
 
@@ -221,10 +224,11 @@
 {
     _alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _alertWindow.windowLevel = UIWindowLevelAlert;
-//    [_alertWindow makeKeyAndVisible];
+
     _alertWindow.hidden = NO;
-    [[MOBApplication sharedApplication] showWindow:_alertWindow];
+    [_alertWindow showOnCurrentScene];
     [_alertWindow addSubview:self];
+    alertGlobeWindow = _alertWindow;
     
     switch (style)
     {

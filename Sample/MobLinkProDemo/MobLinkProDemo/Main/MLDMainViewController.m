@@ -76,12 +76,12 @@
     
     [childController.tabBarItem setTitleTextAttributes:@{
                                                          NSForegroundColorAttributeName : [UIColor colorWithRed:157/255.0 green:164/255.0 blue:184/255.0 alpha:1.0],
-                                                         NSFontAttributeName : [UIFont fontWithName:@"PingFangTC-Semibold" size:11]
+                                                         NSFontAttributeName : Font(PingFangSemibold,11)
                                                          }
                                               forState:UIControlStateNormal];
     [childController.tabBarItem setTitleTextAttributes:@{
                                                          NSForegroundColorAttributeName : [UIColor colorWithRed:50/255.0 green:102/255.0 blue:255/255.0 alpha:1.0],
-                                                         NSFontAttributeName : [UIFont fontWithName:@"PingFangTC-Semibold" size:11]
+                                                         NSFontAttributeName : Font(PingFangSemibold, 11)
                                                          }
                                               forState:UIControlStateSelected];
     

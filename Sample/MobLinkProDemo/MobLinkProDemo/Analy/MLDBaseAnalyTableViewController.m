@@ -68,7 +68,7 @@ static NSString * const analyReuseIdentifier = @"MLDBaseAnalyTableViewCellId";
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0 + SCREEN_WIDTH / count * idx, 0, SCREEN_WIDTH / count, 40.0)];
         label.text = obj;
         label.textAlignment = NSTextAlignmentCenter;
-        label.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:15];
+        label.font = Font(PingFangSemibold,   15);
         label.textColor = [UIColor colorWithRed:157/255.0 green:164/255.0 blue:184/255.0 alpha:1/1.0];
         [view addSubview:label];
     }];
