@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
 	s.platform            = :ios, '8.0'
 	s.frameworks          = "ImageIO", "JavaScriptCore"
-	s.libraries           = "icucore", "z", "c++", "sqlite3","-ObjC"
+	s.libraries           = "icucore", "z", "c++", "sqlite3"
 	s.vendored_frameworks = 'MobLinkPro/MobLinkPro.framework'
 	s.dependency 'MOBFoundation'
 end
