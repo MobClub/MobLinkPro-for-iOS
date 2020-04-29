@@ -29,7 +29,7 @@
     self.isAlreadyRun = NO;
     
     [[MLDUserManager sharedManager] loginUser];
-    [MobLink setDelegate:self];
+    
     MLSDKScene *scene = [MLSDKScene sceneForPath:@"/demo/test/123" params:@{@"key11": @"value11"}];
     [MobLink getMobId:scene result:^(NSString * _Nullable mobid, NSString * _Nullable domain, NSError * _Nullable error) {
         NSLog(@"------> mobid: %@  domain:%@ userinfo:%@", mobid, domain, error.userInfo);

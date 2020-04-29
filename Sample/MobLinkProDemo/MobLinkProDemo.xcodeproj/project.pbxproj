@@ -208,6 +208,7 @@
 		7386C32123F14A470006EECE /* MOBNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7386C32023F14A470006EECE /* MOBNavigationViewController.m */; };
 		7386C32623F1743A0006EECE /* MobLinkPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7386C32523F1743A0006EECE /* MobLinkPro.framework */; };
 		738F230623F6DC1D0098C207 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 738F230823F6DC1D0098C207 /* Localizable.strings */; };
+		D53343A8244470AE0091657F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53343A7244470AE0091657F /* CoreFoundation.framework */; };
 		D5512B522330D1F00035B8FD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5512B512330D1F00035B8FD /* SceneDelegate.m */; };
 		D56DEF72235180C700880530 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF6C235180C700880530 /* TencentOpenAPI.framework */; };
 		D56DEF73235180C700880530 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D56DEF6E235180C700880530 /* WeiboSDK.bundle */; };
@@ -676,6 +677,7 @@
 		7386C32523F1743A0006EECE /* MobLinkPro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobLinkPro.framework; sourceTree = "<group>"; };
 		738F230723F6DC1D0098C207 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		738F230923F6DC220098C207 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D53343A7244470AE0091657F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		D5512B502330D1F00035B8FD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		D5512B512330D1F00035B8FD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		D56DEF6C235180C700880530 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
@@ -744,6 +746,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53343A8244470AE0091657F /* CoreFoundation.framework in Frameworks */,
 				D56DEFA22351B0EF00880530 /* DingTalkConnector.framework in Frameworks */,
 				D56DEFAE2351B0EF00880530 /* MeiPaiConnector.framework in Frameworks */,
 				D56DEFAC2351B0EF00880530 /* YouDaoNoteConnector.framework in Frameworks */,
@@ -1103,6 +1106,7 @@
 		2E78C09421E6E9E50032A8E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D53343A7244470AE0091657F /* CoreFoundation.framework */,
 				2EF4495921EDBF0B00C06C18 /* QuartzCore.framework */,
 				2EF4495721EDBF0200C06C18 /* CoreGraphics.framework */,
 				2E78C09721E736220032A8E6 /* CoreTelephony.framework */,
@@ -2221,6 +2225,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = LW5266U92D;
+				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../SDK\"/**",
@@ -2274,7 +2279,7 @@
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/WXWorkSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
 				);
-				MARKETING_VERSION = 3.3.4;
+				MARKETING_VERSION = 3.3.5;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -2296,6 +2301,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = LW5266U92D;
+				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../SDK\"/**",
@@ -2349,7 +2355,7 @@
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/WXWorkSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
 				);
-				MARKETING_VERSION = 3.3.4;
+				MARKETING_VERSION = 3.3.5;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

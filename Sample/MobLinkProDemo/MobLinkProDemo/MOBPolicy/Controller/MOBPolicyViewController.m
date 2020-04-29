@@ -32,8 +32,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
     [self setupUI];
+    self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
     [self loadData];
     
     // Do any additional setup after loading the view.
@@ -159,7 +159,6 @@
     _contentTextView.linkTextAttributes = @{NSForegroundColorAttributeName:UIColorHexString(@"FF7800")};
     SSDKWEAK
     [MobSDK getPrivacyPolicy:@"1" compeletion:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
-        
         NSString *linkText = data[@"content"]?:@"";
         NSString *urlDescription = @"《MobService隐私条款》";
         [attribute appendAttributedString:[[NSAttributedString alloc] initWithString:urlDescription attributes:@{

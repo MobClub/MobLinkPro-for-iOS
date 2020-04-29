@@ -31,7 +31,7 @@
 #endif
 
 #if (defined IMPORT_SUB_QQFriend) || (defined IMPORT_SUB_QZone)
-        [platformsRegister setupQQWithAppId:MOBSSDKQQAppID appkey:MOBSSDKQQAppKey];
+        [platformsRegister setupQQWithAppId:MOBSSDKQQAppID appkey:MOBSSDKQQAppKey enableUniversalLink:YES universalLink:@""];
 #endif
 
 #if (defined IMPORT_SUB_WechatSession) || (defined IMPORT_SUB_WechatTimeline) || (defined IMPORT_SUB_WechatFav)
