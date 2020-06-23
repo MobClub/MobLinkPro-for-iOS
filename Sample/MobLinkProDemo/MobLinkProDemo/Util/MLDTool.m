@@ -133,6 +133,7 @@
                                       title:title
                                        type:SSDKContentTypeWebPage];
 
+    
     [shareParams SSDKSetupFacebookParamsByText:text
                                          image:@"http://www.mob.com/assets/images/pro_pic_MobLink-9615ec41.png"
                                            url:pageUrl
@@ -141,6 +142,7 @@
                                 attachementUrl:nil
                                        hashtag:@"#MobLink"
                                          quote:@"Mob官网 - 全球领先的移动开发者服务平台"
+                                     shareType:SSDKFacebookShareTypeShareSheet
                                           type:SSDKContentTypeWebPage];
     // 短信内容
     [shareParams SSDKSetupSMSParamsByText:[NSString stringWithFormat:@"%@ %@ %@", title, domainUrl.absoluteString, text]
@@ -280,7 +282,17 @@
                                       attachments:nil
                                        recipients:@[@"15757870542"]
                                              type:SSDKContentTypeText];
-            [params SSDKSetupFacebookParamsByText:[NSString stringWithFormat:@"MobLink 一键唤醒 %@ 移动端场景还原解决方案", domainUrlStr] image:sImage url:nil urlTitle:@"MobLink 一键唤醒" urlName:nil attachementUrl:nil hashtag:nil quote:nil type:SSDKContentTypeImage];
+            
+            [params SSDKSetupFacebookParamsByText:[NSString stringWithFormat:@"MobLink 一键唤醒 %@ 移动端场景还原解决方案", domainUrlStr]
+                                            image:sImage
+                                              url:nil
+                                         urlTitle:@"MobLink 一键唤醒"
+                                          urlName:nil
+                                   attachementUrl:nil
+                                          hashtag:nil
+                                            quote:nil
+                                        shareType:SSDKFacebookShareTypeShareSheet
+                                             type:SSDKContentTypeImage];
             self.paramsCache = params.copy;
             [self shareWithParams:params onView:onView];
         }
@@ -365,7 +377,7 @@
 + (BOOL)isFirstPromote
 {
     static NSString *const MLDAlreadyPromote = @"MLDAlreadyPromote";
-    
+
     BOOL res = [[[NSUserDefaults standardUserDefaults] objectForKey:MLDAlreadyPromote] boolValue];
     if (!res)
     {
@@ -373,7 +385,7 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
-    return !res;
+    return res;
 }
 
 @end

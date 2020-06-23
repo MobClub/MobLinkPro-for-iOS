@@ -295,6 +295,7 @@
     {
         params = @{@"id" : uid};
     }
+    NSLog(@"%@", urlString);
     [MOBFHttpService sendHttpRequestByURLString:urlString
                                          method:@"POST"
                                      parameters:params

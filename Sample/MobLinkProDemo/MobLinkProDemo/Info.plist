@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>$(MARKETING_VERSION)</string>
+	<string>3.3.5</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -29,8 +29,8 @@
 			<string>mobtool_qq</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>QQ41E44574</string>
-				<string>tencent1109411100</string>
+				<string>QQ41EAEB2B</string>
+				<string>tencent1105914667</string>
 			</array>
 		</dict>
 		<dict>
@@ -197,5 +197,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

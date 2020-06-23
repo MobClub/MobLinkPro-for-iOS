@@ -11,6 +11,7 @@
 #import <MOBFoundation/MOBFoundation.h>
 #import <MOBFoundation/MobSDK+Privacy.h>
 #import <objc/message.h>
+#import <MobLinkPro/MobLink.h>
 static NSString * kMOBPolicyManagerSaveKey =  @"kMOBPolicyManagerSaveKey";
 
 @interface MOBPolicyManager ()
@@ -35,11 +36,15 @@ static MOBPolicyManager * manager = nil;
     id cacheKey = [[NSUserDefaults standardUserDefaults] objectForKey:kMOBPolicyManagerSaveKey];
     if (cacheKey) {
         self.isAllowPolicy = cacheKey;
+        if (self.isAllowPolicy) {
+            [MobLink setDelegate:[[UIApplication sharedApplication]delegate]];
+        }
         return;
     }
     MOBPolicyViewController *vc = [MOBPolicyViewController new];
     vc.policyStaus = ^(BOOL status) {
         self.isAllowPolicy = @(status);
+        [MobLink setDelegate:[[UIApplication sharedApplication]delegate]];
         [MobSDK uploadPrivacyPermissionStatus:status onResult:nil];
         [[NSUserDefaults standardUserDefaults] setObject:@(status) forKey:kMOBPolicyManagerSaveKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
