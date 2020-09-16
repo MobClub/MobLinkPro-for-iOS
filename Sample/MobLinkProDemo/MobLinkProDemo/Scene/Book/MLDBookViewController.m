@@ -108,7 +108,7 @@
     {
         bookID = @"0";
     }
-    NSString *path = [NSString stringWithFormat:@"/scene/novel/%@?", bookID];
+    NSString *path = [NSString stringWithFormat:@"/scene/novel?id=%@", bookID];
 
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if ([MLDUserManager sharedManager].currentUserId)
@@ -135,7 +135,7 @@
     }
     else
     {
-        [[MLDTool shareInstance] getMobidWithPath:path
+        [[MLDTool shareInstance] getMobidWithPath:@"/scene/novel"
                                            params:params
                                            result:^(NSString *mobid, NSString *domain, NSError *error) {
             if (error) {
