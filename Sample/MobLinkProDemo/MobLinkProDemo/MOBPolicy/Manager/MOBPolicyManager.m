@@ -39,6 +39,7 @@ static MOBPolicyManager * manager = nil;
         if (self.isAllowPolicy) {
             [MobLink setDelegate:[[UIApplication sharedApplication]delegate]];
         }
+
         return;
     }
     MOBPolicyViewController *vc = [MOBPolicyViewController new];

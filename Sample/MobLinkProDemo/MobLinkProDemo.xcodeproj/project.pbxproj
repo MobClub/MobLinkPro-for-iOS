@@ -237,7 +237,6 @@
 		D56DEFB72351B0EF00880530 /* LineConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF8D2351B0EE00880530 /* LineConnector.framework */; };
 		D56DEFB82351B0EF00880530 /* GooglePlusConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF8E2351B0EE00880530 /* GooglePlusConnector.framework */; };
 		D56DEFB92351B0EF00880530 /* SMSConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF8F2351B0EF00880530 /* SMSConnector.framework */; };
-		D56DEFBA2351B0EF00880530 /* TelegramConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF902351B0EF00880530 /* TelegramConnector.framework */; };
 		D56DEFBB2351B0EF00880530 /* TwitterConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF912351B0EF00880530 /* TwitterConnector.framework */; };
 		D56DEFBC2351B0EF00880530 /* VKontakteConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF922351B0EF00880530 /* VKontakteConnector.framework */; };
 		D56DEFBD2351B0EF00880530 /* WechatConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF932351B0EF00880530 /* WechatConnector.framework */; };
@@ -709,7 +708,6 @@
 		D56DEF8D2351B0EE00880530 /* LineConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LineConnector.framework; sourceTree = "<group>"; };
 		D56DEF8E2351B0EE00880530 /* GooglePlusConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlusConnector.framework; sourceTree = "<group>"; };
 		D56DEF8F2351B0EF00880530 /* SMSConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMSConnector.framework; sourceTree = "<group>"; };
-		D56DEF902351B0EF00880530 /* TelegramConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TelegramConnector.framework; sourceTree = "<group>"; };
 		D56DEF912351B0EF00880530 /* TwitterConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterConnector.framework; sourceTree = "<group>"; };
 		D56DEF922351B0EF00880530 /* VKontakteConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VKontakteConnector.framework; sourceTree = "<group>"; };
 		D56DEF932351B0EF00880530 /* WechatConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WechatConnector.framework; sourceTree = "<group>"; };
@@ -751,7 +749,6 @@
 				D56DEFAE2351B0EF00880530 /* MeiPaiConnector.framework in Frameworks */,
 				D56DEFAC2351B0EF00880530 /* YouDaoNoteConnector.framework in Frameworks */,
 				D56DEFC02351B0EF00880530 /* InstapaperConnector.framework in Frameworks */,
-				D56DEFBA2351B0EF00880530 /* TelegramConnector.framework in Frameworks */,
 				2E78C09621E6E9E50032A8E6 /* libc++.tbd in Frameworks */,
 				5ECF4DE122CB582400867F9C /* MOBFoundation.framework in Frameworks */,
 				D56DEFC72351B0EF00880530 /* YouTubeConnector.framework in Frameworks */,
@@ -1731,7 +1728,6 @@
 				D56DEFA12351B0EF00880530 /* RenrenConnector.framework */,
 				D56DEF7A2351B0ED00880530 /* SinaWeiboConnector.framework */,
 				D56DEF8F2351B0EF00880530 /* SMSConnector.framework */,
-				D56DEF902351B0EF00880530 /* TelegramConnector.framework */,
 				D56DEF982351B0EF00880530 /* TencentWeiboConnector.framework */,
 				D56DEF882351B0EE00880530 /* TumblrConnector.framework */,
 				D56DEF912351B0EF00880530 /* TwitterConnector.framework */,
@@ -1813,7 +1809,7 @@
 				TargetAttributes = {
 					2E04CDFF21BE65D0004351E0 = {
 						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = LW5266U92D;
+						DevelopmentTeam = C87V99P45A;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
@@ -2224,7 +2220,7 @@
 				CODE_SIGN_ENTITLEMENTS = MobLinkProDemo/MobLinkProDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = LW5266U92D;
+				DEVELOPMENT_TEAM = C87V99P45A;
 				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2279,15 +2275,15 @@
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/WXWorkSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
 				);
-				MARKETING_VERSION = 3.3.5;
+				MARKETING_VERSION = 3.3.7;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.MobLinkPro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobtech.dailydiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = MobLinkProDev;
+				PROVISIONING_PROFILE_SPECIFIER = DailyNewMobile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2298,9 +2294,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = MobLinkProDemo/MobLinkProDemo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = LW5266U92D;
+				DEVELOPMENT_TEAM = C87V99P45A;
 				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2355,14 +2351,14 @@
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/WXWorkSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
 				);
-				MARKETING_VERSION = 3.3.5;
+				MARKETING_VERSION = 3.3.7;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.MobLinkPro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobtech.dailydiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = MobLinkProInHouse;
+				PROVISIONING_PROFILE_SPECIFIER = DailyNewMobile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

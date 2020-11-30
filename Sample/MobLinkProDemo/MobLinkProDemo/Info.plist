@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.3.5</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -30,7 +30,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>QQ41EAEB2B</string>
-				<string>tencent1105914667</string>
+				<string>tencent1110451818</string>
 			</array>
 		</dict>
 		<dict>
@@ -40,7 +40,7 @@
 			<string>mobtool_wechat</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wx01634d672597c03c</string>
+				<string>wx617c77c82218ea2c</string>
 			</array>
 		</dict>
 		<dict>

@@ -168,9 +168,9 @@
 */
 #if (defined IMPORT_SUB_QQFriend) || (defined IMPORT_SUB_QZone)
     //AppID
-    #define MOBSSDKQQAppID @"1105914667"
+    #define MOBSSDKQQAppID @"1110451818"//@"1105914667"
     //AppKey
-    #define MOBSSDKQQAppKey @"csEzGDYWmrRRnmCD"
+    #define MOBSSDKQQAppKey @"OlbzvuSP3Hgj5yNS"//@"csEzGDYWmrRRnmCD"
     //AuthType
     #define MOBSSDKQQAuthType SSDKAuthorizeTypeBoth
     //useTIM 是否优先使用TIM客户端
@@ -204,9 +204,9 @@
 */
 #if (defined IMPORT_SUB_WechatSession) || (defined IMPORT_SUB_WechatTimeline) || (defined IMPORT_SUB_WechatFav)
     //AppID
-    #define MOBSSDKWeChatAppID @"wx01634d672597c03c"
+    #define MOBSSDKWeChatAppID @"wx617c77c82218ea2c"//@"wx01634d672597c03c"
     //AppSecret
-    #define MOBSSDKWeChatAppSecret @"64020361b8ec4c99936c0e3999a9f249"
+    #define MOBSSDKWeChatAppSecret @"c7253e5289986cf4c4c74d1ccc185fb1"//@"64020361b8ec4c99936c0e3999a9f249"
 #endif
 
 
