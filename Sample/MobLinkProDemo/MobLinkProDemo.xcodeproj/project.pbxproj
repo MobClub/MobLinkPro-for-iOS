@@ -1785,7 +1785,7 @@
 				TargetAttributes = {
 					2E04CDFF21BE65D0004351E0 = {
 						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = C87V99P45A;
+						DevelopmentTeam = Q87QUX3533;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
@@ -2196,7 +2196,8 @@
 				CODE_SIGN_ENTITLEMENTS = MobLinkProDemo/MobLinkProDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = C87V99P45A;
+				CURRENT_PROJECT_VERSION = 20210319;
+				DEVELOPMENT_TEAM = Q87QUX3533;
 				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2251,15 +2252,15 @@
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/WXWorkSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
 				);
-				MARKETING_VERSION = 3.3.8;
+				MARKETING_VERSION = 3.3.10;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobtech.dailydiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MobTech.allkeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = DailyNewMobile;
+				PROVISIONING_PROFILE_SPECIFIER = com.MobTech.allkeysDevelop;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2270,9 +2271,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = MobLinkProDemo/MobLinkProDemo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = C87V99P45A;
+				CURRENT_PROJECT_VERSION = 20210319;
+				DEVELOPMENT_TEAM = Q87QUX3533;
 				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2327,14 +2329,14 @@
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/WXWorkSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
 				);
-				MARKETING_VERSION = 3.3.8;
+				MARKETING_VERSION = 3.3.10;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobtech.dailydiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MobTech.allkeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = DailyNewMobile;
+				PROVISIONING_PROFILE_SPECIFIER = comMobTechallkeysDevelopadhoc;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

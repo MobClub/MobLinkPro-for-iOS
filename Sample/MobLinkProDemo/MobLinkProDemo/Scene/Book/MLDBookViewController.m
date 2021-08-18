@@ -70,7 +70,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (self.scene)
         {
-//            [[MLDTool shareInstance] showAlertWithScene:self.scene];
+            [[MLDTool shareInstance] showAlertWithScene:self.scene];
         }
     });
 }
@@ -165,7 +165,7 @@
 {
     MLDReadOperation *readOperation = [[MLDReadOperation alloc] initWithBookViewController:self];
     MLDBookPresentationTableViewController *presentationController = [readOperation presentationViewController:markModel];
-    
+    presentationController.view.frame = self.view.bounds;
     [self.view insertSubview:presentationController.view atIndex:0];
     [self addChildViewController:presentationController];
 }

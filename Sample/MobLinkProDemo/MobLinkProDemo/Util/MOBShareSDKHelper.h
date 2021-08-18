@@ -110,7 +110,7 @@
     //RedirectUri
     #define MOBSSDKSinaWeiboRedirectUri @"http://www.sharesdk.cn"
 
-    #define MOBSSDKSinaWeiboUniversalLink @"https://bj2ks.share2dlink.com/"
+    #define MOBSSDKSinaWeiboUniversalLink @"https://70imc.share2dlink.com/"
 
     //AuthType 授权优先类型 web sso both
     #define MOBSSDKSinaWeiboAuthType SSDKAuthorizeTypeBoth
