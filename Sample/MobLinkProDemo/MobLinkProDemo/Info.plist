@@ -95,7 +95,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>20190701</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>FacebookAppID</key>
 	<string>148252749452354</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -157,7 +157,7 @@
 	<key>MOBAppSecret</key>
 	<string>b89d2427a3bc7ad1aea1e1e8c1d36bf3</string>
 	<key>MobLink_Channel</key>
-	<string>pgy</string>
+	<string>604849c78d4b7076913b4a4a</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
