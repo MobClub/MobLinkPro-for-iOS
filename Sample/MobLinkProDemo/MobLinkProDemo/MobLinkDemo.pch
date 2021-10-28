@@ -32,7 +32,9 @@
     //测试
     #define MLD_Host @"http://10.21.141.61"
     #define MLD_Port @"8999"
-    #define baseShareUrl @"http://moblinks.fe.beta.mob.com/"
+//    #define baseShareUrl @"http://moblinks.fe.beta.mob.com/"
+    #define baseShareUrl @"http://fed-moblink-pre.mob.com/"
+
     #define ULDomain @"https://70r9.link.mob.com"
 #else
     //线上
