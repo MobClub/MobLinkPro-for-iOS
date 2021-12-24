@@ -35,6 +35,11 @@
  */
 @property (nonatomic, copy, readonly, nullable) NSString *rawURL;
 
+/**
+ 是否是新用户
+ */
+@property (nonatomic, assign) BOOL isNewUser;
+
 
 /**
  初始化场景 @form v3.0.0
