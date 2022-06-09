@@ -1,0 +1,6 @@
+framework module MobLinkPro {
+    umbrella header "MobLinkPro-umbrella.h"
+    
+    export *
+    module * { export * }
+}
