@@ -73,15 +73,6 @@
     // 发送场景还原记录
     if (scene.params && [scene.params isKindOfClass:[NSDictionary class]])
     {
-        if(scene.isNewUser){
-            UIAlertControllerAlertCreate(@"我是新用户", nil)
-            .addCancelAction(@"OK")
-            .present();
-        }else{
-            UIAlertControllerAlertCreate(@"我是老用户", nil)
-            .addCancelAction(@"OK")
-            .present();
-        }
         NSString *otherId = scene.params[@"id"];
         if (otherId)
         {
