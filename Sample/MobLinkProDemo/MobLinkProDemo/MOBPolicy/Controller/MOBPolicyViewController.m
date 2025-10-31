@@ -151,14 +151,14 @@
 
 - (void)loadData{
     
-    NSMutableAttributedString *attribute = [[NSMutableAttributedString alloc] initWithString:@"    欢迎您使用MobLink提供的演示DEMO，MOBLink提供了一步实现移动端深度链接的功能，不仅极大地方便了您的终端用户的服务体验，更为您实时了解终端用户的数据进行了统计分析。为了对您的MOBLink功能进行来源追溯并帮助您更精细化运营，我们将依据MobLink的《隐私政策》来帮助你了解我们需要收集哪些数据。\n\n\n详情点击:" attributes:@{
+    NSMutableAttributedString *attribute = [[NSMutableAttributedString alloc] initWithString:@"    欢迎您使用ZZT提供的演示DEMO，MOBLink提供了一步实现移动端深度链接的功能，不仅极大地方便了您的终端用户的服务体验，更为您实时了解终端用户的数据进行了统计分析。为了对您的MOBLink功能进行来源追溯并帮助您更精细化运营，我们将依据ZZT的《隐私政策》来帮助你了解我们需要收集哪些数据。\n\n\n详情点击:" attributes:@{
         NSFontAttributeName :Font(PingFangReguler, 13),
         NSForegroundColorAttributeName:UIColorHexString(@"000000")
     }];
     
     _contentTextView.linkTextAttributes = @{NSForegroundColorAttributeName:UIColorHexString(@"FF7800")};
     NSString *linkText = @"https://policy.zztfly.com/sdk/link/privacy";
-    NSString *urlDescription = @"《MobLink隐私条款》";
+    NSString *urlDescription = @"《ZZT隐私条款》";
     [attribute appendAttributedString:[[NSAttributedString alloc] initWithString:urlDescription attributes:@{
         NSFontAttributeName :Font(PingFangReguler, 13),NSLinkAttributeName:linkText}]];
     _contentTextView.attributedText = attribute;
@@ -183,7 +183,7 @@
 
 - (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange{
     MOBPolicyWebViewController *vc = [MOBPolicyWebViewController new];
-    vc.title = @"《MobLink隐私政策》";
+    vc.title = @"《ZZT隐私政策》";
     vc.extraInfo[@"url"] = URL;
     vc.showAnimated(YES).push();
     return NO;

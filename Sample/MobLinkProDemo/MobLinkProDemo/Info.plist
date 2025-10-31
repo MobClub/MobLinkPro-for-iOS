@@ -201,5 +201,11 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>FVVForceIpv6</key>
+	<false/>
+	<key>MOBForceHttps</key>
+	<false/>
+	<key>MOBDomain</key>
+	<string>0</string>
 </dict>
 </plist>

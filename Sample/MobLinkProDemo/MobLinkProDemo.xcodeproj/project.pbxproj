@@ -13,7 +13,6 @@
 		059512CA14BB11E9828FAC87 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0595114514BB11E98459AC87 /* JavaScriptCore.framework */; };
 		2E04CE0521BE65D0004351E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E04CE0421BE65D0004351E0 /* AppDelegate.m */; };
 		2E04CE1321BE65D2004351E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E04CE1221BE65D2004351E0 /* main.m */; };
-		2E04CE1D21BE65D2004351E0 /* MobLinkProDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E04CE1C21BE65D2004351E0 /* MobLinkProDemoTests.m */; };
 		2E04CE4D21BE8451004351E0 /* MLDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E04CE4C21BE8451004351E0 /* MLDMainViewController.m */; };
 		2E0DF52E21BF92FE0084AED3 /* MLDBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DF52D21BF92FE0084AED3 /* MLDBaseCollectionViewController.m */; };
 		2E0DF53221BF94BC0084AED3 /* MLDSceneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DF53021BF94BC0084AED3 /* MLDSceneCollectionViewCell.m */; };
@@ -117,8 +116,8 @@
 		2EFEB9BD21CA505D00A18109 /* MLDReadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB9BC21CA505D00A18109 /* MLDReadTableViewCell.m */; };
 		2EFEB9C021CA50D900A18109 /* MLDReadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB9BF21CA50D900A18109 /* MLDReadView.m */; };
 		2EFEB9C321CA64AA00A18109 /* MLDReadConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB9C221CA64A900A18109 /* MLDReadConfig.m */; };
+		5BA1F67DDE72C18FC0EC1C21 /* Pods_MobLinkProDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90982459E9F806B81B8ABD8 /* Pods_MobLinkProDemo.framework */; };
 		5ECF4DAD22CB1FCB00867F9C /* MOBShareSDKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF4DAB22CB1FCB00867F9C /* MOBShareSDKHelper.m */; };
-		5ECF4DE122CB582400867F9C /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECF4DE022CB582400867F9C /* MOBFoundation.framework */; };
 		7386C03F23F1451F0006EECE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7386C02723F1451F0006EECE /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		7386C04023F1451F0006EECE /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7386C03023F1451F0006EECE /* ViewController+MASAdditions.m */; };
 		7386C04123F1451F0006EECE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7386C03423F1451F0006EECE /* MASCompositeConstraint.m */; };
@@ -206,7 +205,6 @@
 		7386C31D23F14A240006EECE /* MOBPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7386C31823F14A240006EECE /* MOBPolicyViewController.m */; };
 		7386C31E23F14A240006EECE /* MOBPolicyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7386C31B23F14A240006EECE /* MOBPolicyManager.m */; };
 		7386C32123F14A470006EECE /* MOBNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7386C32023F14A470006EECE /* MOBNavigationViewController.m */; };
-		7386C32623F1743A0006EECE /* MobLinkPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7386C32523F1743A0006EECE /* MobLinkPro.framework */; };
 		738F230623F6DC1D0098C207 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 738F230823F6DC1D0098C207 /* Localizable.strings */; };
 		D53343A8244470AE0091657F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53343A7244470AE0091657F /* CoreFoundation.framework */; };
 		D5512B522330D1F00035B8FD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5512B512330D1F00035B8FD /* SceneDelegate.m */; };
@@ -237,7 +235,6 @@
 		D56DEFBB2351B0EF00880530 /* TwitterConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF912351B0EF00880530 /* TwitterConnector.framework */; };
 		D56DEFBC2351B0EF00880530 /* VKontakteConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF922351B0EF00880530 /* VKontakteConnector.framework */; };
 		D56DEFBD2351B0EF00880530 /* WechatConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF932351B0EF00880530 /* WechatConnector.framework */; };
-		D56DEFBE2351B0EF00880530 /* KaiXinConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF942351B0EF00880530 /* KaiXinConnector.framework */; };
 		D56DEFC02351B0EF00880530 /* InstapaperConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF962351B0EF00880530 /* InstapaperConnector.framework */; };
 		D56DEFC12351B0EF00880530 /* PinterestConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF972351B0EF00880530 /* PinterestConnector.framework */; };
 		D56DEFC32351B0EF00880530 /* MailConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56DEF992351B0EF00880530 /* MailConnector.framework */; };
@@ -281,8 +278,6 @@
 		2E04CE0421BE65D0004351E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2E04CE1221BE65D2004351E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E04CE1821BE65D2004351E0 /* MobLinkProDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobLinkProDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E04CE1C21BE65D2004351E0 /* MobLinkProDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobLinkProDemoTests.m; sourceTree = "<group>"; };
-		2E04CE1E21BE65D2004351E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E04CE4B21BE8451004351E0 /* MLDMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLDMainViewController.h; sourceTree = "<group>"; };
 		2E04CE4C21BE8451004351E0 /* MLDMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLDMainViewController.m; sourceTree = "<group>"; };
 		2E04CE4E21BE8551004351E0 /* MobLinkDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobLinkDemo.pch; sourceTree = "<group>"; };
@@ -480,7 +475,6 @@
 		2EFEB9C221CA64A900A18109 /* MLDReadConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLDReadConfig.m; sourceTree = "<group>"; };
 		5ECF4DAB22CB1FCB00867F9C /* MOBShareSDKHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBShareSDKHelper.m; sourceTree = "<group>"; };
 		5ECF4DAC22CB1FCB00867F9C /* MOBShareSDKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBShareSDKHelper.h; sourceTree = "<group>"; };
-		5ECF4DE022CB582400867F9C /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		7386C02623F1451F0006EECE /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		7386C02723F1451F0006EECE /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		7386C02823F1451F0006EECE /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -667,9 +661,10 @@
 		7386C31B23F14A240006EECE /* MOBPolicyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBPolicyManager.m; sourceTree = "<group>"; };
 		7386C31F23F14A460006EECE /* MOBNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBNavigationViewController.h; sourceTree = "<group>"; };
 		7386C32023F14A470006EECE /* MOBNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBNavigationViewController.m; sourceTree = "<group>"; };
-		7386C32523F1743A0006EECE /* MobLinkPro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobLinkPro.framework; sourceTree = "<group>"; };
 		738F230723F6DC1D0098C207 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		738F230923F6DC220098C207 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A90982459E9F806B81B8ABD8 /* Pods_MobLinkProDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobLinkProDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F7CD3D892665636E55CB72 /* Pods-MobLinkProDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobLinkProDemo.debug.xcconfig"; path = "Target Support Files/Pods-MobLinkProDemo/Pods-MobLinkProDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D53343A7244470AE0091657F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		D5512B502330D1F00035B8FD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		D5512B512330D1F00035B8FD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
@@ -702,7 +697,6 @@
 		D56DEF912351B0EF00880530 /* TwitterConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterConnector.framework; sourceTree = "<group>"; };
 		D56DEF922351B0EF00880530 /* VKontakteConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VKontakteConnector.framework; sourceTree = "<group>"; };
 		D56DEF932351B0EF00880530 /* WechatConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WechatConnector.framework; sourceTree = "<group>"; };
-		D56DEF942351B0EF00880530 /* KaiXinConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KaiXinConnector.framework; sourceTree = "<group>"; };
 		D56DEF962351B0EF00880530 /* InstapaperConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InstapaperConnector.framework; sourceTree = "<group>"; };
 		D56DEF972351B0EF00880530 /* PinterestConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PinterestConnector.framework; sourceTree = "<group>"; };
 		D56DEF992351B0EF00880530 /* MailConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MailConnector.framework; sourceTree = "<group>"; };
@@ -725,6 +719,7 @@
 		D5F3DE20235408E30096D068 /* NSObject+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
 		D5F3DE22235409590096D068 /* NSObject+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Log.h"; sourceTree = "<group>"; };
 		D5FE0CFB23325B2A00CA523D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDE72D4F895D5BCCB50DBDA5 /* Pods-MobLinkProDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobLinkProDemo.release.xcconfig"; path = "Target Support Files/Pods-MobLinkProDemo/Pods-MobLinkProDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -737,7 +732,6 @@
 				D56DEFAC2351B0EF00880530 /* YouDaoNoteConnector.framework in Frameworks */,
 				D56DEFC02351B0EF00880530 /* InstapaperConnector.framework in Frameworks */,
 				2E78C09621E6E9E50032A8E6 /* libc++.tbd in Frameworks */,
-				5ECF4DE122CB582400867F9C /* MOBFoundation.framework in Frameworks */,
 				D56DEFC72351B0EF00880530 /* YouTubeConnector.framework in Frameworks */,
 				D56DEF72235180C700880530 /* TencentOpenAPI.framework in Frameworks */,
 				D56DEFA72351B0EF00880530 /* FacebookMessengerConnector.framework in Frameworks */,
@@ -751,7 +745,6 @@
 				D56DEFA52351B0EF00880530 /* AliSocialConnector.framework in Frameworks */,
 				D56DEFA62351B0EF00880530 /* MingDaoConnector.framework in Frameworks */,
 				D56DEFAA2351B0EF00880530 /* WhatsAppConnector.framework in Frameworks */,
-				D56DEFBE2351B0EF00880530 /* KaiXinConnector.framework in Frameworks */,
 				D5AA1C1923516FC300615394 /* ShareSDK.framework in Frameworks */,
 				D56DEF74235180C700880530 /* libWeiboSDK.a in Frameworks */,
 				D5AA1C1023516FC300615394 /* ShareSDKExtension.framework in Frameworks */,
@@ -774,7 +767,6 @@
 				D56DEFB32351B0EF00880530 /* PocketConnector.framework in Frameworks */,
 				D5AA1C3F2351724100615394 /* TencentOpenAPI.framework in Frameworks */,
 				D56DEFBD2351B0EF00880530 /* WechatConnector.framework in Frameworks */,
-				7386C32623F1743A0006EECE /* MobLinkPro.framework in Frameworks */,
 				D56DEFC92351B0EF00880530 /* FlickrConnector.framework in Frameworks */,
 				D56DEFA82351B0EF00880530 /* DropboxConnector.framework in Frameworks */,
 				D56DEFB42351B0EF00880530 /* FacebookConnector.framework in Frameworks */,
@@ -783,6 +775,7 @@
 				059512CA14BB11E9828FAC87 /* JavaScriptCore.framework in Frameworks */,
 				D56DEFB82351B0EF00880530 /* GooglePlusConnector.framework in Frameworks */,
 				D56DEFBB2351B0EF00880530 /* TwitterConnector.framework in Frameworks */,
+				5BA1F67DDE72C18FC0EC1C21 /* Pods_MobLinkProDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,9 +793,9 @@
 			isa = PBXGroup;
 			children = (
 				2E04CE0221BE65D0004351E0 /* MobLinkProDemo */,
-				2E04CE1B21BE65D2004351E0 /* MobLinkProDemoTests */,
 				2E04CE0121BE65D0004351E0 /* Products */,
 				2E78C09421E6E9E50032A8E6 /* Frameworks */,
+				77A3CBF1FD1D86E179F2AD7E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -819,7 +812,6 @@
 			isa = PBXGroup;
 			children = (
 				2EE43A9121E833D800B66183 /* MobLinkProDemo.entitlements */,
-				2E78C08D21E6E92B0032A8E6 /* SDK */,
 				2E04CE4E21BE8551004351E0 /* MobLinkDemo.pch */,
 				2E1AFB9B21EF15910041E86F /* MLDDefine.h */,
 				2E04CE0321BE65D0004351E0 /* AppDelegate.h */,
@@ -842,15 +834,6 @@
 				2E11BB9321BFA11C00C820DB /* Supporting Files */,
 			);
 			path = MobLinkProDemo;
-			sourceTree = "<group>";
-		};
-		2E04CE1B21BE65D2004351E0 /* MobLinkProDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				2E04CE1C21BE65D2004351E0 /* MobLinkProDemoTests.m */,
-				2E04CE1E21BE65D2004351E0 /* Info.plist */,
-			);
-			path = MobLinkProDemoTests;
 			sourceTree = "<group>";
 		};
 		2E11BB8821BF97D900C820DB /* Home */ = {
@@ -1064,24 +1047,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		2E78C08D21E6E92B0032A8E6 /* SDK */ = {
-			isa = PBXGroup;
-			children = (
-				7386C32423F1743A0006EECE /* MobLinkPro */,
-				2E78C08E21E6E92B0032A8E6 /* Required */,
-			);
-			name = SDK;
-			path = ../../../SDK;
-			sourceTree = "<group>";
-		};
-		2E78C08E21E6E92B0032A8E6 /* Required */ = {
-			isa = PBXGroup;
-			children = (
-				5ECF4DE022CB582400867F9C /* MOBFoundation.framework */,
-			);
-			path = Required;
-			sourceTree = "<group>";
-		};
 		2E78C09421E6E9E50032A8E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1094,6 +1059,7 @@
 				054830FD14BB11E98338AC87 /* ImageIO.framework */,
 				0592D80A14BB11E9977BAC87 /* libz.tbd */,
 				0595114514BB11E98459AC87 /* JavaScriptCore.framework */,
+				A90982459E9F806B81B8ABD8 /* Pods_MobLinkProDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1607,12 +1573,13 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		7386C32423F1743A0006EECE /* MobLinkPro */ = {
+		77A3CBF1FD1D86E179F2AD7E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7386C32523F1743A0006EECE /* MobLinkPro.framework */,
+				D2F7CD3D892665636E55CB72 /* Pods-MobLinkProDemo.debug.xcconfig */,
+				FDE72D4F895D5BCCB50DBDA5 /* Pods-MobLinkProDemo.release.xcconfig */,
 			);
-			path = MobLinkPro;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		D56DEF6B235180C700880530 /* QQSDK */ = {
@@ -1692,7 +1659,6 @@
 				D56DEF8E2351B0EE00880530 /* GooglePlusConnector.framework */,
 				D56DEFA02351B0EF00880530 /* InstagramConnector.framework */,
 				D56DEF962351B0EF00880530 /* InstapaperConnector.framework */,
-				D56DEF942351B0EF00880530 /* KaiXinConnector.framework */,
 				D56DEF832351B0EE00880530 /* KakaoConnector.framework */,
 				D56DEF8D2351B0EE00880530 /* LineConnector.framework */,
 				D56DEF9B2351B0EF00880530 /* LinkedInConnector.framework */,
@@ -1742,6 +1708,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E04CE2121BE65D2004351E0 /* Build configuration list for PBXNativeTarget "MobLinkProDemo" */;
 			buildPhases = (
+				82591ECCCBE3511AC39B3C9A /* [CP] Check Pods Manifest.lock */,
 				2E04CDFC21BE65D0004351E0 /* Sources */,
 				2E04CDFD21BE65D0004351E0 /* Frameworks */,
 				2E04CDFE21BE65D0004351E0 /* Resources */,
@@ -1786,7 +1753,7 @@
 					2E04CDFF21BE65D0004351E0 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = Q87QUX3533;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
 								enabled = 1;
@@ -1861,6 +1828,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		82591ECCCBE3511AC39B3C9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobLinkProDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E04CDFC21BE65D0004351E0 /* Sources */ = {
@@ -2049,7 +2041,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E04CE1D21BE65D2004351E0 /* MobLinkProDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2190,18 +2181,18 @@
 		};
 		2E04CE2221BE65D2004351E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F7CD3D892665636E55CB72 /* Pods-MobLinkProDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = MobLinkProDemo/MobLinkProDemo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20220512;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20220802;
 				DEVELOPMENT_TEAM = Q87QUX3533;
 				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../SDK\"/**",
 					"\"$(SRCROOT)/MobLinkProDemo/ThridLibs/ShareSDK\"/**",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/ShareSDK/Support/Required",
@@ -2230,11 +2221,17 @@
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformConnector",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/Required",
+					"\"${PODS_ROOT}/FlyVerifyCSDK/FlyVerifyCSDK\"",
+					"\"${PODS_ROOT}/MOBFoundation/MOBFoundation\"",
+					"\"${PODS_ROOT}/mob_linksdk_pro/MobLinkPro\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FlyVerifyCSDK\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/MOBFoundation\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/mob_linksdk_pro\"",
 				);
 				GCC_PREFIX_HEADER = MobLinkProDemo/MobLinkDemo.pch;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				INFOPLIST_FILE = MobLinkProDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/MobLinkProDemo/ThridLibs/ShareSDK/Support/PlatformSDK/WeChatSDK",
@@ -2252,7 +2249,7 @@
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/WXWorkSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
 				);
-				MARKETING_VERSION = 3.3.14;
+				MARKETING_VERSION = 3.3.20;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -2260,25 +2257,25 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MobTech.allkeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = com.MobTech.allkeysDevelop;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		2E04CE2321BE65D2004351E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE72D4F895D5BCCB50DBDA5 /* Pods-MobLinkProDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = MobLinkProDemo/MobLinkProDemo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20220512;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20220802;
 				DEVELOPMENT_TEAM = Q87QUX3533;
 				ENABLE_BITCODE = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../SDK\"/**",
 					"\"$(SRCROOT)/MobLinkProDemo/ThridLibs/ShareSDK\"/**",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/ShareSDK/Support/Required",
@@ -2307,11 +2304,17 @@
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformConnector",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/Required",
+					"\"${PODS_ROOT}/FlyVerifyCSDK/FlyVerifyCSDK\"",
+					"\"${PODS_ROOT}/MOBFoundation/MOBFoundation\"",
+					"\"${PODS_ROOT}/mob_linksdk_pro/MobLinkPro\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FlyVerifyCSDK\"",
+					"\"${PODS_ROOT}/MOBFoundation/MOBFoundation\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/mob_linksdk_pro\"",
 				);
 				GCC_PREFIX_HEADER = MobLinkProDemo/MobLinkDemo.pch;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../SDK\"/**";
 				INFOPLIST_FILE = MobLinkProDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/MobLinkProDemo/ThridLibs/ShareSDK/Support/PlatformSDK/WeChatSDK",
@@ -2329,14 +2332,14 @@
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/WXWorkSDK",
 					"$(PROJECT_DIR)/MobLinkProDemo/ThridLibs/SDK/ShareSDK/Support/PlatformSDK/YiXinSDK",
 				);
-				MARKETING_VERSION = 3.3.14;
+				MARKETING_VERSION = 3.3.20;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MobTech.allkeys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = comMobTechallkeysDevelopadhoc;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
